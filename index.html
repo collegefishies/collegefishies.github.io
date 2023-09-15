@@ -1,70 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Info -->
-  <title>collegefishies' coding blog</title>
-
-  <!-- Meta -->
-  <meta charset="UTF-8">
-  <!-- <meta http-equiv="refresh" content='1'> -->
-
-  <!-- CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
-
-<header class="bg-dark text-white px-3 py-3 fixed-top">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <h1><a href="/index.html" class="text-white text-decoration-none">collegefishies' coding blog</a></h1>
+  <head>
+    <!-- Info -->
+    <title>collegefishies' coding blog</title>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content='1'> -->
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="bg-dark text-white px-3 py-3 fixed-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <h1><a href="/index.html" class="text-white text-decoration-none">collegefishies' coding blog</a></h1>
+          </div>
+          <div class="col-1">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              Menu?
+              <span class="navbar-toggler-icon">Menu</span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link text-white" href="/">Home</a></li>
+                  <!-- Add additional navigation items here -->
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
       </div>
-      <div class="col-1">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link text-white" href="/">Home</a></li>
-              <!-- Add additional navigation items here -->
+    </header>
+    <div class="bg-dark"><h1>collegefishies' coding blog</h1></div>
+    <main class="content-container mt-5 min-vh-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-3">
+            <!-- <h1>Useful Links</h1> -->
+            <h2>Cheat Sheets</h2>
+            <!-- <p><strong>Warning, no nav bar on these pages</strong></p> -->
+            <ul>
+              <li><a href="grid_flexbox.html">Grid and Flexbox</a></li>
+              <li><a href="iframes.html">iFrames</a></li>
+              <li><a href="images.html">Images</a></li>
+              <li><a href="interactiveForm.html">Interactive Form</a></li>
+              <li><a href="metadata.html">Metadata</a></li>
+              <li><a href="pseudo-elements.html">Pseudo-elements</a></li>
+              <li><a href="psuedo-class.html">Pseudo-class</a></li>
+              <li><a href="selectors.html">Selectors</a></li>
+              <li><a href="semantic.html">Semantic HTML</a></li>
+              <li><a href="units.html">Units</a></li>
             </ul>
           </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-</header>
-
-
-  <div class="bg-dark"><h1>collegefishies' coding blog</h1></div>
-
-  <main class="mt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-3">
-        <!-- <h1>Useful Links</h1> -->
-        <h2>Cheat Sheets</h2>
-        <!-- <p><strong>Warning, no nav bar on these pages</strong></p> -->
-        <ul>
-          <li><a href="grid_flexbox.html">Grid and Flexbox</a></li>
-          <li><a href="iframes.html">iFrames</a></li>
-          <li><a href="images.html">Images</a></li>
-          <li><a href="interactiveForm.html">Interactive Form</a></li>
-          <li><a href="metadata.html">Metadata</a></li>
-          <li><a href="pseudo-elements.html">Pseudo-elements</a></li>
-          <li><a href="psuedo-class.html">Pseudo-class</a></li>
-          <li><a href="selectors.html">Selectors</a></li>
-          <li><a href="semantic.html">Semantic HTML</a></li>
-          <li><a href="units.html">Units</a></li>
-        </ul>
+          <div class="col-12 col-lg-9">
+            <h1>About</h1>
+            <div class="card m-3 p-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam qui autem, quo voluptates odio, natus at ut distinctio voluptatum dolorem cupiditate debitis quia, neque reiciendis culpa impedit unde dolorum eos!
+            </div>
+            <h1>Blog</h1>
+            <div class="card m-3 p-3">
+              <h2>HTML Practice</h2>
+              <h6>Date: September 15, 2023</h6>
+              I've been taking a Front-end dev course on Coursera from Meta, and while I am learning. I am not mastering. I have a better top down understanding of the field of web dev, but to really get my hands dirty, I need something to make. <br><br>
+              Unfortunately, since web-dev isn't just programming, it is programming with design, I need designs to copy off of. So I think a great route to get practice is to find websites to copy, and without looking at their source, try and reproduce their designs. I wonder if there is a website that does this with proceedingly difficult website layouts.
+              <div class="alert alert-info">
+                <b>GPT says:</b>
+                <ul>
+                  <li>
+                    <strong>Frontend Mentor</strong> - This platform offers real-world projects along with designs. You have to code the solution yourself. The projects are of varying difficulties and can help you sharpen both your HTML/CSS and JavaScript skills.
+                  </li>
+                  <li>
+                    <strong>Codewell</strong> - Provides design templates and asks you to replicate them using HTML/CSS. They offer solutions as well, so you can check your work.
+                  </li>
+                  <li>
+                    <strong>LeetCode</strong> - While primarily known for algorithmic challenges, they have a Frontend card that includes some HTML/CSS challenges.
+                  </li>
+                  <li>
+                    <strong>CSS Battle</strong> - This is more of a game than a project-based platform, but it's good for practicing CSS. You're given a design and you have to replicate it using minimal CSS.
+                  </li>
+                  <li>
+                    <strong>Exercism</strong> - This platform offers language tracks, including HTML and JavaScript. While it doesn't specifically focus on cloning websites, it does offer bite-sized exercises that can help improve your web development skills.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card m-3 p-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam qui autem, quo voluptates odio, natus at ut distinctio voluptatum dolorem cupiditate debitis quia, neque reiciendis culpa impedit unde dolorum eos!
+            </div>
+            
+          </div>
         </div>
-        <div class="col-12 col-lg-9">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam qui autem, quo voluptates odio, natus at ut distinctio voluptatum dolorem cupiditate debitis quia, neque reiciendis culpa impedit unde dolorum eos!
+      </div>
+    </main>
+    <footer class="bg-dark text-white px-3 py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            
+          </div>
+          <div class="col-12 col-md-6 text-md-end">
+            <p>© 2023 Enrique Mendez. All rights reserved.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
 </html>
