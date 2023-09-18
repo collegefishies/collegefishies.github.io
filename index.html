@@ -80,86 +80,91 @@
           <div class="col-12 col-lg-9">
             <h1>Blog</h1>
             <article class="card m-3 p-3">
+              <h2><code>A post about hardlinks! </h2>
+              <h6>Date: September 18, 2023</h6>
+              <p>
+                I was stoked when I first discovered hardlinks. This was because I had made my first useful library. It was a vector calculus library that made simulation of N 3D particles simple, so I needed to use it a lot. But also, I would discover add functionality I could add later. So I needed some way to be able to use the most up to date function and also a way to update all copies simultaneously.  I don't remember how I found out about it, but that's exactly what hard links are. They are pointers to the same file in storage. So opening and editing it is editing the same file. It gives non-local access in a way that looks local to anyone using the hard link.
+              </p>
+            </article>
+            <article class="card m-3 p-3">
               <h2>Installed my first linter</h2>
               <h6>Date: September 17, 2023</h6>
               <p>I learned about linters in the context of HTML/CSS. The essentially just check for syntax errors. Since CSS provides absolutely no runtime halts when running code this makes them necessary for CSS debugging. I just added an HTML one because I was curious how good my source was.
-
-              So I installed SublimeLinter. It was surprisingly annoying. For future use, the steps are:
+                So I installed SublimeLinter. It was surprisingly annoying. For future use, the steps are:
                 <ol>
                   <li>Install SublimeLinter</li>
                   <li>Install SublimeLinter extensions for each linter, e.g., stylelint and html tidy</li>
                   <li>Configure the package settings for Sublime Linter to notify it of your new linters. Without this step, they will not function.</li>
                 </ol></p>
-
                 <img src="imgs/linter.png" alt="Linter Functioning">
+              </article>
+              <article class="card m-3 p-3">
+                <h2>Finished the HTML/CSS Coursera Course!</h2>
+                <h6>Date: September 16, 2023</h6>
+                <p>So I finally finished the course, and I feel like I've learned a lot. Especially after applying the techniques in practice. However, what I've realized in both building this website, is I can see how pure HTML can lead to a very long file that will become harder to manage over time. So I'm interested in learning React to handle retaining components and managing the layout programmatically. This especially makes sense for blog posts, as they'll all have the same format and simply grow in number, so a database is a better place to store them rather than in the HTML.</p>
+              </article>
+              <article class="card m-3 p-3">
+                <h2>My first dummy website</h2>
+                <h6>Date: September 16, 2023</h6>
+                <p>I just made my first website for a portfolio! It's for a fictional garden company as part of my course on "HTML and CSS in Depth" from Meta. See it <a href="web-portfolio/lucky-shrub/index.html">here</a>. I made it entirely in HTML/CSS. <br><br>
+                <a href="web-portfolio/lucky-shrub/index.html"><img src="imgs/lucky-shrub.png" alt="Screenshot of lucky shrub main page."> </a>
+              </p>
             </article>
             <article class="card m-3 p-3">
-              <h2>Finished the HTML/CSS Coursera Course!</h2>
-              <h6>Date: September 16, 2023</h6>
-              <p>So I finally finished the course, and I feel like I've learned a lot. Especially after applying the techniques in practice. However, what I've realized in both building this website, is I can see how pure HTML can lead to a very long file that will become harder to manage over time. So I'm interested in learning React to handle retaining components and managing the layout programmatically. This especially makes sense for blog posts, as they'll all have the same format and simply grow in number, so a database is a better place to store them rather than in the HTML.</p>
-            </article>
-            <article class="card m-3 p-3">
-              <h2>My first dummy website</h2>
-              <h6>Date: September 16, 2023</h6>
-              <p>I just made my first website for a portfolio! It's for a fictional garden company as part of my course on "HTML and CSS in Depth" from Meta. See it <a href="web-portfolio/lucky-shrub/index.html">here</a>. I made it entirely in HTML/CSS. <br><br>
-              <a href="web-portfolio/lucky-shrub/index.html"><img src="imgs/lucky-shrub.png" alt="Screenshot of lucky shrub main page."> </a>
-            </p>
-          </article>
-          <article class="card m-3 p-3">
-            <h2>Making a favicon</h2>
-            <h6>Date: September 15, 2023</h6>
-            <p>I was checking the consoles for bugs on my site and found this: &nbsp;<code>Not allowed to load local resource: file:///favicon.ico</code>.
-              Luckily, <a href="https://chat.openai.com/share/a9243553-f7cb-4205-8733-46709f7fe4aa">ChatGPT knows all.</a>
-              
-              Just use <br><code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>
-            </p>
-          </article>
-          <article class="card m-3 p-3">
-            <div class="entry">
-              <h2>HTML Practice</h2>
+              <h2>Making a favicon</h2>
               <h6>Date: September 15, 2023</h6>
-              I've been taking a Front-end dev course on Coursera from Meta, and while I am learning. I am not mastering. I have a better top down understanding of the field of web dev, but to really get my hands dirty, I need something to make. <br><br>
-              Unfortunately, since web-dev isn't just programming, it is programming with design, I need designs to copy off of. So I think a great route to get practice is to find websites to copy, and without looking at their source, try and reproduce their designs. I wonder if there is a website that does this with proceedingly difficult website layouts.
-            </div>
-            <div class="alert alert-info m-3">
-              <b>💡GPT says: </b> Yes!
-              <br>
-              <ul>
-                <li>
-                  <strong>Frontend Mentor</strong> - This platform offers real-world projects along with designs. You have to code the solution yourself. The projects are of varying difficulties and can help you sharpen both your HTML/CSS and JavaScript skills.
-                </li>
-                <li>
-                  <strong>Codewell</strong> - Provides design templates and asks you to replicate them using HTML/CSS. They offer solutions as well, so you can check your work.
-                </li>
-                <li>
-                  <strong>LeetCode</strong> - While primarily known for algorithmic challenges, they have a Frontend card that includes some HTML/CSS challenges.
-                </li>
-                <li>
-                  <strong>CSS Battle</strong> - This is more of a game than a project-based platform, but it's good for practicing CSS. You're given a design and you have to replicate it using minimal CSS.
-                </li>
-                <li>
-                  <strong>Exercism</strong> - This platform offers language tracks, including HTML and JavaScript. While it doesn't specifically focus on cloning websites, it does offer bite-sized exercises that can help improve your web development skills.
-                </li>
-              </ul>
-            </div>
-          </article>
-          
+              <p>I was checking the consoles for bugs on my site and found this: &nbsp;<code>Not allowed to load local resource: file:///favicon.ico</code>.
+                Luckily, <a href="https://chat.openai.com/share/a9243553-f7cb-4205-8733-46709f7fe4aa">ChatGPT knows all.</a>
+                
+                Just use <br><code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>
+              </p>
+            </article>
+            <article class="card m-3 p-3">
+              <div class="entry">
+                <h2>HTML Practice</h2>
+                <h6>Date: September 15, 2023</h6>
+                I've been taking a Front-end dev course on Coursera from Meta, and while I am learning. I am not mastering. I have a better top down understanding of the field of web dev, but to really get my hands dirty, I need something to make. <br><br>
+                Unfortunately, since web-dev isn't just programming, it is programming with design, I need designs to copy off of. So I think a great route to get practice is to find websites to copy, and without looking at their source, try and reproduce their designs. I wonder if there is a website that does this with proceedingly difficult website layouts.
+              </div>
+              <div class="alert alert-info m-3">
+                <b>💡GPT says: </b> Yes!
+                <br>
+                <ul>
+                  <li>
+                    <strong>Frontend Mentor</strong> - This platform offers real-world projects along with designs. You have to code the solution yourself. The projects are of varying difficulties and can help you sharpen both your HTML/CSS and JavaScript skills.
+                  </li>
+                  <li>
+                    <strong>Codewell</strong> - Provides design templates and asks you to replicate them using HTML/CSS. They offer solutions as well, so you can check your work.
+                  </li>
+                  <li>
+                    <strong>LeetCode</strong> - While primarily known for algorithmic challenges, they have a Frontend card that includes some HTML/CSS challenges.
+                  </li>
+                  <li>
+                    <strong>CSS Battle</strong> - This is more of a game than a project-based platform, but it's good for practicing CSS. You're given a design and you have to replicate it using minimal CSS.
+                  </li>
+                  <li>
+                    <strong>Exercism</strong> - This platform offers language tracks, including HTML and JavaScript. While it doesn't specifically focus on cloning websites, it does offer bite-sized exercises that can help improve your web development skills.
+                  </li>
+                </ul>
+              </div>
+            </article>
+            
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-  <footer class="bg-dark text-white px-3 py-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          Made by me with just HTML/CSS and Bootstrap.
-        </div>
-        <div class="col-12 col-md-6 text-md-end">
-          <p>© 2023 Enrique Mendez. All rights reserved.</p>
+    </main>
+    <footer class="bg-dark text-white px-3 py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            Made by me with just HTML/CSS and Bootstrap.
+          </div>
+          <div class="col-12 col-md-6 text-md-end">
+            <p>© 2023 Enrique Mendez. All rights reserved.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
 </html>
