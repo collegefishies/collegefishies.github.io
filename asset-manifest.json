@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/collegefishies.github.io/static/css/main.e6c13ad2.css",
+    "main.js": "/collegefishies.github.io/static/js/main.5e18611a.js",
+    "static/js/787.fbd4fcf8.chunk.js": "/collegefishies.github.io/static/js/787.fbd4fcf8.chunk.js",
+    "index.html": "/collegefishies.github.io/index.html",
+    "main.e6c13ad2.css.map": "/collegefishies.github.io/static/css/main.e6c13ad2.css.map",
+    "main.5e18611a.js.map": "/collegefishies.github.io/static/js/main.5e18611a.js.map",
+    "787.fbd4fcf8.chunk.js.map": "/collegefishies.github.io/static/js/787.fbd4fcf8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.5e18611a.js"
+  ]
+}
