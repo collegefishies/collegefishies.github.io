@@ -6,7 +6,11 @@ import BlogPosts from './comp/BlogPosts'
 import BlogPost from './comp/BlogPost'
 import Row from 'react-bootstrap/Row'
 import {Routes, Route, Link} from 'react-router-dom'
-import blogs from './blogs'
+import { blog } from './blogs'
+
+function returnPost(post, index) {
+  return <BlogPost title={post.title} date={post.date}>{post.content}</BlogPost>
+}
 
 function Blog() {
   return ( 
@@ -26,7 +30,7 @@ function Blog() {
             <UsefulLinks title="HTML/CSS Cheat Sheets"></UsefulLinks>
           </Sidebar>
           <BlogPosts>
-            <BlogPost></BlogPost>
+            {blog.posts.map(returnPost)}
           </BlogPosts>
         </Row>
       </ContentArea>

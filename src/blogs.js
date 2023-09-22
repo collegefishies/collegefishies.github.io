@@ -1,5 +1,10 @@
-export default const blogs = {
+export const blog = {
   "posts": [
+    {
+      "title": "Learned React and Migrated Site!",
+      "date": "09/21/23",
+      "content": "I learned React basics and started porting over my website. As I mentioned earlier, blog posts are very programmatic. You can just loop over a list of objects, and make new posts accordingly, and this post is created with that very technique! Unfortunately its very simplified right now, hosting only text content. Perhaps, I can handle images by just adding an image attribute, and just posting that?"
+    },
     {
       "title": "Finished Git Certification",
       "date": "09/18/23",
