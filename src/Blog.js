@@ -1,11 +1,9 @@
-import Header from './comp/Header'
 import ContentArea from './comp/ContentArea'
-import Sidebar, {getFilenames} from './comp/Sidebar'
+import Sidebar from './comp/Sidebar'
 import UsefulLinks from './comp/UsefulLinks'
-import BlogPosts from './comp/BlogPosts'
+import Content from './comp/Content'
 import BlogPost from './comp/BlogPost'
 import Row from 'react-bootstrap/Row'
-import {Routes, Route, Link} from 'react-router-dom'
 import { blog } from './blogs'
 
 function returnPostComponent(post, index) {
@@ -24,14 +22,13 @@ function Blog() {
             </UsefulLinks>
             <UsefulLinks title="Git Cheat Sheets">
               <ul>
-                {getFilenames}
               </ul>
             </UsefulLinks>
-            <UsefulLinks title="HTML/CSS Cheat Sheets"></UsefulLinks>
+            <UsefulLinks title="HTML/CnSS Cheat Sheets"></UsefulLinks>
           </Sidebar>
-          <BlogPosts>
+          <Content title="Blog">
             {blog.posts.map(returnPostComponent)}
-          </BlogPosts>
+          </Content>
         </Row>
       </ContentArea>
   ); 

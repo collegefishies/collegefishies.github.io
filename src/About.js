@@ -1,11 +1,8 @@
-import Header from './comp/Header'
 import ContentArea from './comp/ContentArea'
-import Sidebar, {getFilenames} from './comp/Sidebar'
+import Sidebar from './comp/Sidebar'
 import UsefulLinks from './comp/UsefulLinks'
-import BlogPosts from './comp/BlogPosts'
-import BlogPost from './comp/BlogPost'
+import Content from './comp/Content'
 import Row from 'react-bootstrap/Row'
-import {Routes, Route, Link} from 'react-router-dom'
 function Main() {
   return ( 
       <ContentArea>
@@ -18,14 +15,13 @@ function Main() {
             </UsefulLinks>
             <UsefulLinks title="Git Cheat Sheets">
               <ul>
-                {getFilenames}
+                {}
               </ul>
             </UsefulLinks>
             <UsefulLinks title="HTML/CSS Cheat Sheets"></UsefulLinks>
           </Sidebar>
-          <BlogPosts>
-            About me
-          </BlogPosts>
+          <Content title="About me">
+          </Content>
         </Row>
       </ContentArea>
   ); 

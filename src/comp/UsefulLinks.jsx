@@ -1,8 +1,4 @@
-import styled from 'styled-components'
 
-const LinkStyle = styled.div`
-	flex: 1
-`
 
 function UsefulLinks(props) {
 	const title = props.title ? <h4>{props.title}</h4> : "Useful Links"
