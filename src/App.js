@@ -1,5 +1,5 @@
 import Header from './comp/Header'
-import Main from './Main'
+import Blog from './Blog'
 import About from './About'
 import ContentArea from './comp/ContentArea'
 import Sidebar, {getFilenames} from './comp/Sidebar'
@@ -19,9 +19,8 @@ function App() {
   return ( 
     <div className="App">
       <Header title="collegefishies' coding blog"/>  
-
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
