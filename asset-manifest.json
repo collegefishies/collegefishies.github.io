@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.6ccd65a8.css",
-    "main.js": "/static/js/main.a3206569.js",
+    "main.css": "/static/css/main.cf24040d.css",
+    "main.js": "/static/js/main.f58b2d70.js",
     "static/js/787.3e59ecbc.chunk.js": "/static/js/787.3e59ecbc.chunk.js",
+    "static/media/lucky-shrub.png": "/static/media/lucky-shrub.d9b5f9264ebfd4757911.png",
+    "static/media/linter.png": "/static/media/linter.a0550fb15666c200c7a8.png",
     "index.html": "/index.html",
-    "main.6ccd65a8.css.map": "/static/css/main.6ccd65a8.css.map",
-    "main.a3206569.js.map": "/static/js/main.a3206569.js.map",
+    "main.cf24040d.css.map": "/static/css/main.cf24040d.css.map",
+    "main.f58b2d70.js.map": "/static/js/main.f58b2d70.js.map",
     "787.3e59ecbc.chunk.js.map": "/static/js/787.3e59ecbc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ccd65a8.css",
-    "static/js/main.a3206569.js"
+    "static/css/main.cf24040d.css",
+    "static/js/main.f58b2d70.js"
   ]
 }
