@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row'
 import {Routes, Route, Link} from 'react-router-dom'
 import { blog } from './blogs'
 
-function returnPost(post, index) {
+function returnPostComponent(post, index) {
   return <BlogPost title={post.title} date={post.date}>{post.content}</BlogPost>
 }
 
@@ -30,7 +30,7 @@ function Blog() {
             <UsefulLinks title="HTML/CSS Cheat Sheets"></UsefulLinks>
           </Sidebar>
           <BlogPosts>
-            {blog.posts.map(returnPost)}
+            {blog.posts.map(returnPostComponent)}
           </BlogPosts>
         </Row>
       </ContentArea>
