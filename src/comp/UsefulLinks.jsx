@@ -1,12 +1,17 @@
+import styled from 'styled-components'
 
+const Title = styled.h4`
+	
+`
+const Credit = styled.p`
+	color: #999;
+`
 
 function UsefulLinks(props) {
-	const title = props.title ? <h4>{props.title}</h4> : "Useful Links"
-	const credit = props.credit ? <h6>Credit: {props.credit}</h6> : null
 	return (
 		<div>
-			{title}
-			{credit}
+			{props.title ? <Title>{props.title}</Title> : "Useful Links"}
+			{props.credit ? <Credit>Credit: {props.credit}</Credit> : null}
 			{props.children}
 		</div>
 	)

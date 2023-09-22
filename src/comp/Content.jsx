@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const ContentStyle = styled.div.attrs({
-  className: "col-12 col-lg-9"
+  className: "col-12 col-lg-6 col-med-9"
 })`
 `;
 
