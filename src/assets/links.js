@@ -27,11 +27,12 @@ export const links = [
 			<a href="cs/web/units.html">Units</a>,
 			<a href="cs/web/animation-and-effects.html">Animation and Keyframes</a>,
 			<a href="cs/web/text-effects.html">Text Effects</a>,
+			<a href="cs/web/debugging-frontend.html">Debugging the Front end</a>,
 		],
 	},
 	{
 		"title" : "Git Cheat Sheets",
-		"credit": "Meta",
+		"credit": "GitHub",
 		"links" : [
 			<a href="cs/git/git-terminology.pdf">Git Terminology</a>,
 			<a href="cs/git/git-cheat-sheet.pdf">Git Cheat Sheet</a>,
