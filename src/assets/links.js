@@ -12,7 +12,7 @@ export const links = [
 			],
 	},
 	{
-		"title" : "Git Cheat Sheets",
+		"title" : "HTML/CSS Cheat Sheets",
 		"credit": "Meta",
 		"links" : [
 			<a href="cs/web/grid_flexbox.html">Grid and Flexbox</a>,
@@ -30,7 +30,7 @@ export const links = [
 		],
 	},
 	{
-		"title" : "HTML/CSS Cheat Sheets",
+		"title" : "Git Cheat Sheets",
 		"credit": "Meta",
 		"links" : [
 			<a href="cs/git/git-terminology.pdf">Git Terminology</a>,
