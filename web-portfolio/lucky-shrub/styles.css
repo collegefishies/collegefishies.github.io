@@ -1,0 +1,153 @@
+/* Reset and Global Styles */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #EDEFEE;
+	font-family: 'Didot', 'Optima', 'Bradley Hand', sans-serif;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+/* Main Layout */
+main, footer {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+@media (min-width: 1440px) {
+	main, footer {
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+}
+
+/* Header Styles */
+header > img {
+	display: block;
+	margin: auto;
+	width: 10rem;
+}
+
+/* Navigation Styles */
+nav {
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	background-color: black;
+}
+nav ul {
+  	display: flex;
+  	list-style: none;
+/*	padding: 2rem;*/
+  	height:4rem;
+  	text-align: center;
+  	align-items: center;
+}
+nav li {
+	flex: 1;
+	display: inline-block;
+}
+.navlink {
+  	color: white;
+  	font-size: 1.5rem;
+  	padding: 1.5rem;
+  	text-decoration: none;
+/*	border: 1px solid white;*/
+}
+
+
+
+
+/* Text Content */
+.articlebody {
+	min-height: 100vh;
+}
+h1 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+h2 {
+	font-size: 2rem;
+	min-height: 5rem;
+}
+
+/* Product and Articles */
+section {
+	display: flex;
+}
+article {
+	flex: 1;
+	margin: 1rem;
+}
+article > img {
+	float: left;
+	margin-bottom: 0.5rem;
+	margin-right: 1rem;
+	width: 50%;
+}
+.sub article > img {
+	height: 7rem;
+	width: auto;
+}
+
+/* Footer Styles */
+footer {
+	display: flex;
+	margin-top: 0;
+}
+footer > div {
+	flex: 1;
+}
+footer img {
+	width: 3rem;
+}
+footer div p {
+	text-align: right;
+}
+
+/* Media Queries */
+@media (min-width: 900px) {
+	h2 {
+		min-height: auto;
+	}
+}
+@media(min-width: 768px){
+	.navlink:hover {
+		font-size: 2rem;
+		transition-duration: 0.3s;
+	}
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+	nav ul {
+		flex-direction: column;
+		height: auto;
+	}
+	nav li {
+		padding: 1rem;
+		margin: 0;
+	}
+	.navlink {
+		padding: 1rem;
+		margin:0;
+	}
+	.navlink:hover {
+		opacity: 0.7;
+		transition-duration: 0.3s;
+	}
+	section {
+		flex-direction: column;
+	}
+	article > img {
+		height: auto;
+		width: 100%;
+	}
+	.sub article > img {
+		height: auto;
+		width: 100%;
+	}
+}
+
