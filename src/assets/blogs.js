@@ -1,7 +1,7 @@
 //blogs.js
 //import images
-import linter    	from '../imgs/linter.png'
-import luckyShrub	from '../imgs/lucky-shrub.png'
+import linter    	from './imgs/linter.png'
+import luckyShrub	from './imgs/lucky-shrub.png'
 //import components
 import styled	from 'styled-components'
 import {Link}	from 'react-router-dom'
@@ -57,7 +57,7 @@ export const blog = {
 			"date": "09/16/23",
 			"content": <>
 				<p>I just made my first website for a portfolio! It's for a fictional garden company as part of my course on 'HTML and CSS in Depth' from Meta. See my portfolio on the left. I made it entirely in HTML/CSS.</p>
-				<Link to=""><ImageLink src={luckyShrub} /></Link>
+				<a href="web-portfolio/lucky-shrub/index.html"><ImageLink src={luckyShrub} /></a>
 			</>
 		},
 		{

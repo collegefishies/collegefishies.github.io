@@ -5,8 +5,8 @@ import UsefulLinks	from '../comp/UsefulLinks'
 import Content    	from '../comp/Content'
 import BlogPost   	from '../comp/BlogPost'
 import Row        	from 'react-bootstrap/Row'
-import { blog }   	from '../data/blogs'
-import { links }  	from '../data/links'
+import { blog }   	from '../assets/blogs'
+import { links }  	from '../assets/links'
 
 function returnPostComponent(post, index) {
 	return <BlogPost title={post.title} date={post.date} images={post.images}>{post.content}</BlogPost>

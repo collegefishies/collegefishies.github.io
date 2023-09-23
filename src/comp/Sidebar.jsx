@@ -1,7 +1,7 @@
 // Non modular. Holds all the useful links
 import UsefulLinks	from './UsefulLinks';
 import styled     	from 'styled-components';
-import {links}    	from '../data/links';
+import {links}    	from '../assets/links';
 
 const SidebarStyle = styled.div.attrs({
 	className: "col-12 col-lg-3"
