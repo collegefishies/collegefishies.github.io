@@ -1,6 +1,7 @@
 import Header	from './comp/Header'
 import Blog  	from './pages/Blog'
 import Samples 	from './pages/Samples'
+import UsefulLinks 	from './pages/UsefulLinks'
 import About 	from './pages/About'
 import {Routes, Route} from 'react-router-dom'
 import './assets/css/App.css'
@@ -19,6 +20,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Blog />} />
 				<Route path="/samples" element={<Samples />} />
+				<Route path="/useful-links" element={<UsefulLinks />} />
 				<Route path="/about" element={<About />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>

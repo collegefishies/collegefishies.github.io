@@ -6,15 +6,16 @@ const NavLink = styled(Link)`
   text-decoration: none;
   font-size: 1.25rem;
   color: white;
-  padding-left: 5rem;
-  padding-right: 5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 0.5rem;
   &:hover {
-    background-color: #ccc;
-    color: black;
+    color: grey;
   }
+`
+
+const LI = styled.li`
+margin: 1rem;
 `
 
 export default function NavToBurger(props) {
@@ -28,15 +29,18 @@ export default function NavToBurger(props) {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
+            <LI className="nav-item">
               <NavLink to="/">Home</NavLink>
-            </li>
-            <li className="nav-item">
+            </LI>
+            <LI className="nav-item">
               <NavLink to="/samples">Design Samples</NavLink>
-            </li>
-            <li className="nav-item">
+            </LI>
+            <LI className="nav-item">
+              <NavLink to="/useful-links">Useful Links</NavLink>
+            </LI>
+            <LI className="nav-item">
               <NavLink to="/about">About</NavLink>
-            </li>
+            </LI>
           </ul>
         </div>
       </div>
