@@ -32,6 +32,9 @@ export default function NavToBurger(props) {
               <NavLink to="/">Home</NavLink>
             </li>
             <li className="nav-item">
+              <NavLink to="/samples">Design Samples</NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink to="/about">About</NavLink>
             </li>
           </ul>
