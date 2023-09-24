@@ -8,8 +8,7 @@ function Main() {
 	return ( 
 			<ContentArea>
 				<Row>
-					<Sidebar>
-					</Sidebar>
+					<Sidebar />
 					<Content title="About me">
 						<div class="card m-3 p-3">
 							My name is Enrique Mendez.I have a PhD in Physics from MIT where I studied Quantum Physics in Ultracold Atom Systems as well as independently formulated a classical formulation of Quantum Mechanics. When my thesis is live, I'll post it here. This website is for following and documenting my more programming interests.

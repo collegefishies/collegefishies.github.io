@@ -3,6 +3,7 @@ import Sidebar    	from '../comp/Sidebar'
 import UsefulLinks	from '../comp/UsefulLinks'
 import Content    	from '../comp/Content'
 import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 //import Samples
 import AgeCalculator from '../comp/samples/AgeCalculator/AgeCalculator'
@@ -20,8 +21,7 @@ function Main() {
 	return ( 
 			<ContentArea>
 				<Row>
-					<Sidebar>
-					</Sidebar>
+					<Sidebar />
 					<Content title="Samples">
 						<Sample title="Age Calculator"> <AgeCalculator /> </Sample>
 					</Content>

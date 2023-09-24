@@ -4,6 +4,10 @@ import styled     	from 'styled-components';
 import {links}    	from '../assets/links';
 
 const SidebarStyle = styled.div.attrs({
+	className: "d-none d-sm-block col-lg-3"
+})``;
+
+const VisibleSidebarStyle = styled.div.attrs({
 	className: "col-12 col-lg-3"
 })``;
 
@@ -14,12 +18,17 @@ function returnSectionComponent({title, credit, links}){
 		</UsefulLinks>
 	)
 }
-export default function Sidebar(){
+export default function Sidebar({forceVisible}){
 	return (
 		<>
+		{forceVisible ? 
+		<VisibleSidebarStyle>
+			{links.map(returnSectionComponent)}
+		</VisibleSidebarStyle>
+		:
 		<SidebarStyle>
 			{links.map(returnSectionComponent)}
-		</SidebarStyle>
+		</SidebarStyle>}
 		</>
 	)
 };

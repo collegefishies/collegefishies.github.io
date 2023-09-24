@@ -16,18 +16,7 @@ function Blog() {
 	return ( 
 			<ContentArea>
 				<Row>
-					<Sidebar>
-						<UsefulLinks title="Web Design Portfolio">
-							<ul>
-								<li>Lucky Shrub</li>
-							</ul>
-						</UsefulLinks>
-						<UsefulLinks title="Git Cheat Sheets">
-							<ul>
-							</ul>
-						</UsefulLinks>
-						<UsefulLinks title="HTML/CnSS Cheat Sheets"></UsefulLinks>
-					</Sidebar>
+					<Sidebar />
 					<Content title="Blog">
 						{blog.posts.map(returnPostComponent)}
 					</Content>
