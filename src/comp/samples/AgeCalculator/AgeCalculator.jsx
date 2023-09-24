@@ -71,7 +71,7 @@ function Entry(props){
 	return (
 		<EntryStyle>
 			<DateTitle>{props.title}</DateTitle>
-			<InputBox type="number" defaultValue={props.defaultValue} onChange={props.onChange} min={props.min} max={props.max} required></InputBox>
+			<InputBox type="number" placeholder={props.placeholder} defaultValue={props.defaultValue} onChange={props.onChange} min={props.min} max={props.max} required></InputBox>
 		</EntryStyle>
 	)
 }
@@ -149,67 +149,60 @@ function SeperatorAndButton(){
 }
 
 
+function calculateAge({day, month, year}){
+	const today = new Date();
+	const birthDate = new Date();
+	birthDate.setFullYear(year, month - 1, day)
+	let ageInMilliseconds = Math.abs(today - birthDate)/1000;
+
+	const ageInYears = Math.floor(ageInMilliseconds/(365*24*60*60))
+	ageInMilliseconds -= ageInYears*365*24*60*60
+	const ageInMonths = Math.floor(ageInMilliseconds/(30*24*60*60))
+	ageInMilliseconds -= ageInMonths*30*24*60*60
+	const ageInDays = Math.floor(ageInMilliseconds/(24*60*60))
+
+	return {
+		ageYears: ageInYears,
+		ageMonths: ageInMonths,
+		ageDays: ageInDays,
+	}
+}
+
 export default function AgeCalculator(){
 	const today = new Date();
 	const maxyear = today.getFullYear()
-	const [day, setDay] = useState(24);
-	const [month, setMonth] = useState(9);
-	const [year, setYear] = useState(1984);
-	const [valid, setValid] = useState(true);
-
-
-
-
-	function calculateAge(day, month, year){
-		const today = new Date();
-		const birthDate = new Date(year, month - 1, day);
-		let ageInMilliseconds = today - birthDate;
-
-		const ageInYears = Math.floor(ageInMilliseconds/(365*24*60*60*1000))
-		ageInMilliseconds -= ageInYears*365*24*60*60*1000
-		const ageInMonths = Math.floor(ageInMilliseconds/(30*24*60*60*1000))
-		ageInMilliseconds -= ageInMonths*30*24*60*60*1000
-		const ageInDays = Math.floor(ageInMilliseconds/(24*60*60*1000))
-
-		return {
-			years: ageInYears,
-			months: ageInMonths,
-			days: ageInDays,
-		}
-	}
-	let {years, months, days} = calculateAge(day, month, year)
-	const [ageDay, setAgeDay] = useState(days);
-	const [ageMonth, setAgeMonth] = useState(months);
-	const [ageYear, setAgeYear] = useState(years);
-
+	const [date, setDate] = useState({day: 24, month: 9, year: 1984})
+	const {ageYears, ageMonths, ageDays} = calculateAge(date)
+	const {day, month, year} = date
+	const valid = !isNaN(day) && !isNaN(month) && !isNaN(year)
 	function handleDay(e){
-		const day = e.target.value;
-		if (day >= 1 && day <= 31){setDay(day)}
-		else{setDay("--")}
+		let day = e.target.value;
+		if (day >= 1 && day <= 31){}else{day = NaN}
+	setDate({...date, day})
 	}
 	function handleMonth(e){
-		const month = e.target.value;
-		if (month >=1 && month <= 12){setMonth(month)}
-		else{setMonth("--")}
+		let month = e.target.value;
+		if (month >=1 && month <= 12){}else{month = NaN}
+		setDate({...date, month})
 	}
 	function handleYear(e){
-		const year = e.target.value;
-		if (year >= 0 && year <= maxyear){setYear(year)}
-		else{setYear("--")}
+		let year = e.target.value;
+		if (year >= 0 && year <= maxyear){}else{year = NaN}
+		setDate({...date, year})
 	}
 	return (
 		<Main>
 			<Card>
 				<DateEntry>
-					<Entry title="Day" defaultValue="24" onChange={handleDay} min="1" max="31"/>
-					<Entry title="Month" defaultValue="9" onChange={handleMonth} min="1" max="12"></Entry>
-					<Entry title="Year" defaultValue="1984" onChange={handleYear} min="0" max={year}></Entry>
+					<Entry title="Day" placeholder="DD" defaultValue="24" onChange={handleDay} min="1" max="31"/>
+					<Entry title="Month" placeholder="MM" defaultValue="9" onChange={handleMonth} min="1" max="12"></Entry>
+					<Entry title="Year" placeholder="YYYY" defaultValue="1984" onChange={handleYear} min="0" max={maxyear}></Entry>
 				</DateEntry>
 				<SeperatorAndButton />
 				<AnswerStack>
-					<AnswerLine value={day && months && years ? years : "--"} str="years" />
-					<AnswerLine value={day && months && years ? months : "--"} str="months" />
-					<AnswerLine value={day && months && years ? days : "--"} str="days" />
+					<AnswerLine value={valid ? ageYears : "--"} str="years" />
+					<AnswerLine value={valid ? ageMonths : "--"} str="months" />
+					<AnswerLine value={valid ? ageDays : "--"} str="days" />
 				</AnswerStack>
 			</Card>
 			<Attribution>
