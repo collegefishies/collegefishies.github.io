@@ -23,6 +23,14 @@ const ImageLink = styled.img`
 export const blog = {
 	"posts": [
 		{
+			"title": "Added my First Front-End Challenge!",
+			"date": "09/23/23",
+			"content": <>
+			<p>Despite my sickness (probably Covid), I managed to migrate my entire blog to React, and not only that I completed my first Front-end Dev Challenge! Of reproducing a design element (in react) from design, demonstrating aptitude in HTML/CSS/React and JavaScript! See my <b>Age Calculator</b> <Link to="/samples">here</Link>. What's absolutely wonderful about React is it makes it really easy to combine components. Adding this calculator to my old pure HTML website would have been a headache.</p> 
+			</>
+		},
+
+		{
 			"title": "Learned React and Migrated Site!",
 			"date": "09/21/23",
 			"content": "I learned React basics and started porting over my website. As I mentioned earlier, blog posts are very programmatic. You can just loop over a list of objects, and make new posts accordingly, and this post is created with that very technique! Unfortunately its very simplified right now, hosting only text content. Perhaps, I can handle images by just adding an image attribute, and just posting that? Edit: Added images! I realized instead of storing blog posts as strings I could also store them as react components and do all my styling that way.",

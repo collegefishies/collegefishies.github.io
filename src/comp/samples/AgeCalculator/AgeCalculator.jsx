@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import arrow from './icon-arrow.svg'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 const mobile = "375px";
 const desktop = "1440px";	
@@ -24,6 +25,7 @@ const Card = styled.div`
 	border: 1px solid rgb(0,0,0,0.04);
 	box-shadow: 1rem 1rem 1rem rgb(0,0,0,0.4);
 	border-bottom-right-radius: 9rem;
+	margin: 2rem 1rem;
 `
 
 const EntryStyle = styled.div`
@@ -69,7 +71,7 @@ function Entry(props){
 	return (
 		<EntryStyle>
 			<DateTitle>{props.title}</DateTitle>
-			<InputBox type="number" defaultValue={props.defaultValue} onChange={props.onChange} min={props.min} max={props.max}></InputBox>
+			<InputBox type="number" defaultValue={props.defaultValue} onChange={props.onChange} min={props.min} max={props.max} required></InputBox>
 		</EntryStyle>
 	)
 }
@@ -129,6 +131,12 @@ const Arrow = styled.img`
 	height: 2rem;
 `
 
+const Attribution = styled.div`
+	justify-content: right;
+	font-size: 1rem;
+	opacity: 0.2
+`
+
 function SeperatorAndButton(){
 	return (
 		<Holder>
@@ -147,6 +155,7 @@ export default function AgeCalculator(){
 	const [day, setDay] = useState(24);
 	const [month, setMonth] = useState(9);
 	const [year, setYear] = useState(1984);
+	const [valid, setValid] = useState(true);
 
 
 
@@ -176,15 +185,17 @@ export default function AgeCalculator(){
 	function handleDay(e){
 		const day = e.target.value;
 		if (day >= 1 && day <= 31){setDay(day)}
+		else{setDay("--")}
 	}
 	function handleMonth(e){
 		const month = e.target.value;
 		if (month >=1 && month <= 12){setMonth(month)}
-		console.log(month)
+		else{setMonth("--")}
 	}
 	function handleYear(e){
 		const year = e.target.value;
 		if (year >= 0 && year <= maxyear){setYear(year)}
+		else{setYear("--")}
 	}
 	return (
 		<Main>
@@ -196,15 +207,15 @@ export default function AgeCalculator(){
 				</DateEntry>
 				<SeperatorAndButton />
 				<AnswerStack>
-					<AnswerLine value={years} str="years" />
-					<AnswerLine value={months} str="months" />
-					<AnswerLine value={days} str="days" />
+					<AnswerLine value={day && months && years ? years : "--"} str="years" />
+					<AnswerLine value={day && months && years ? months : "--"} str="months" />
+					<AnswerLine value={day && months && years ? days : "--"} str="days" />
 				</AnswerStack>
 			</Card>
-			<div class="attribution">
-				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-				Coded by <a href="#">Your Name Here</a>.
-			</div>
+			<Attribution>
+				Challenge by <a href="https://www.frontendmentor.io">Frontend Mentor</a>. 
+				Coded by <Link to="/about">Enrique Mendez</Link>.
+			</Attribution>
 
 		</Main>
 	);
