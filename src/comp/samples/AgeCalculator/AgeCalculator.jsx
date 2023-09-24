@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 
 const mobile = "375px";
+const mini = "433px"
 const desktop = "1440px";	
 //colors
 const purple = "hsl(259deg, 100%, 65%)"
@@ -28,11 +29,7 @@ const Card = styled.div`
 	margin: 2rem 1rem;
 `
 
-const EntryStyle = styled.div`
-	display: flex;
-	flex-direction: column;
-	margin: 1rem;
-`
+
 const DateTitle = styled.div`
 	letter-spacing: 0.190rem;
 	text-transform: uppercase;
@@ -44,29 +41,49 @@ const InputBox = styled.input`
 	padding: 1rem;
 	font-size: 75%;
 	padding: 0.5rem 0.5rem 0.5rem 1rem;
-	width: 8rem;
+	width: 100%;
 	border: 1px solid ${lightGrey};
 	border-radius: 0.5rem;
 	font-weight: 800;
 
-	  /* For WebKit browsers like Chrome and Safari */
-	  &::-webkit-inner-spin-button,
-	  &::-webkit-outer-spin-button {
-	    -webkit-appearance: none;
-	    margin: 0;
-	  }
+	@media (max-width: ${mini}) {
+		margin: 0 0.5rem;
+		font-size: 70%;
+		padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	}
+	@media (max-width: ${mobile}) {
+		margin: 0 0.5rem;
+		font-size: 60%;
+		padding: auto;
+	}
+  /* For WebKit browsers like Chrome and Safari */
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
-	  /* For Firefox */
-	  & {
-	    -moz-appearance: textfield;
-	  }
+  /* For Firefox */
+  & {
+    -moz-appearance: textfield;
+  }
 
 `
+
+
 const DateEntry = styled.div`
 	display: flex;
+	justify-content: left
 `
-
-
+const EntryStyle = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 0.5rem;
+	@media (max-width: ${mini}) {
+		margin: 0 0.5rem;
+		width: auto%;
+	}
+`
 function Entry(props){
 	return (
 		<EntryStyle>
@@ -84,6 +101,14 @@ const AnswerStack = styled.div`
 	font-weight: 800;
 	padding: 1rem;
 	padding-top: -1rem;
+	width: 100%;
+
+	@media (max-width: ${mini}) {
+		font-size: 175%
+	}
+	@media (max-width: ${mobile}) {
+		font-size: 140%;
+	}
 `
 const AnswerNumber = styled.div`
 	display:inline;
@@ -112,10 +137,21 @@ const Holder = styled.div`
 	align-items: center;
 	padding-left: 1rem;
 	padding-right: 1rem;
+	@media (max-width: ${mini}) {
+		padding-top: 1rem;
+	}
 `
 const Seperator = styled.hr`
 	flex-grow: 1;
 	color: ${smokeyGrey};
+`
+const RightSeperator = styled.hr`
+	flex-grow: 1;
+	color: ${smokeyGrey};
+	width: 0;
+	@media (max-width: ${mini}) {
+		width: auto;
+	}
 `
 const Indicator = styled.div`
 	display: flex;
@@ -144,6 +180,7 @@ function SeperatorAndButton(){
 			<Indicator>
 				<Arrow src={arrow}/>
 			</Indicator>
+			<RightSeperator />
 		</Holder>
 	)
 }
@@ -206,6 +243,7 @@ export default function AgeCalculator(){
 				</AnswerStack>
 			</Card>
 			<Attribution>
+				* 1 year is defined to be 365 days, 1 month is defined to be 30 days <br/>
 				Challenge by <a href="https://www.frontendmentor.io">Frontend Mentor</a>. 
 				Coded by <Link to="/about">Enrique Mendez</Link>.
 			</Attribution>
