@@ -21,7 +21,7 @@ function Main() {
 	return ( 
 			<ContentArea>
 				<Row>
-					<Sidebar />
+					{/*<Sidebar />*/}
 					<Content title="Samples">
 						<Sample title="Age Calculator"> <AgeCalculator /> </Sample>
 					</Content>
