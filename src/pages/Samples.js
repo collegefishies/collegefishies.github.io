@@ -5,7 +5,7 @@ import Content    	from '../comp/Content'
 import Row from 'react-bootstrap/Row'
 
 //import Samples
-import AgeCalculator from '../comp/samples/AgeCalculator'
+import AgeCalculator from '../comp/samples/AgeCalculator/AgeCalculator'
 
 function Sample(props){
 	return (
