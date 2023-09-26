@@ -2,6 +2,7 @@
 //import images
 import linter    	from './imgs/linter.png'
 import luckyShrub	from './imgs/lucky-shrub.png'
+import sudoku    	from './imgs/sudoku.png'
 //import components
 import styled	from 'styled-components'
 import {Link}	from 'react-router-dom'
@@ -22,6 +23,14 @@ const ImageLink = styled.img`
 
 export const blog = {
 	"posts": [
+		{
+			"title": "Trying my hand at Sudoku.",
+			"date": "09/25/23",
+			"content": <>
+			<p> Mostly recovered. Trying to make a Sudoku Component. I want it to be fully responsive. So I'm trying to force the text to resize according to the number cells, and it's incredibly annoying. I'll get there though.</p>
+			<Image src={sudoku} />
+			</>
+		},
 		{
 			"title": "Added my First Front-End Challenge!",
 			"date": "09/23/23",
