@@ -1,3 +1,4 @@
+import styled     	from 'styled-components'
 import ContentArea	from '../comp/ContentArea'
 import Sidebar    	from '../comp/Sidebar'
 import UsefulLinks	from '../comp/UsefulLinks'
@@ -7,13 +8,19 @@ import Col from 'react-bootstrap/Col'
 
 //import Samples
 import AgeCalculator from '../comp/samples/AgeCalculator/AgeCalculator'
+import SudokuApp from '../comp/samples/Sudoku/SudokuApp'
+
+
+const SampleStyle = styled.div`
+margin-bottom: 3rem;
+`
 
 function Sample(props){
 	return (
-		<div>
+		<SampleStyle>
 			<h3>{props.title}</h3>
 			{props.children}
-		</div>
+		</SampleStyle>
 	)
 }
 
@@ -24,6 +31,7 @@ function Main() {
 					{/*<Sidebar />*/}
 					<Content title="Samples">
 						<Sample title="Age Calculator"> <AgeCalculator /> </Sample>
+						<Sample title="Sudoku"> <SudokuApp /> </Sample>
 					</Content>
 				</Row>
 			</ContentArea>

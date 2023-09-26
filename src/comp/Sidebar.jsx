@@ -29,6 +29,8 @@ export default function Sidebar({forceVisible}){
 		<SidebarStyle>
 			{links.map(returnSectionComponent)}
 		</SidebarStyle>}
+		{!forceVisible ? 
+		<VisibleSidebarStyle />:<SidebarStyle />}
 		</>
 	)
 };

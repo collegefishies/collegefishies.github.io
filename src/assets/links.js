@@ -18,6 +18,7 @@ export const links = [
 			<a href="cs/web/grid_flexbox.html">Grid and Flexbox</a>,
 			<a href="cs/web/iframes.html">iFrames</a>,
 			<a href="cs/web/images.html">Images</a>,
+			<a href="cs/web/color-scheme.html">Color Scheme</a>,
 			<a href="cs/web/interactiveForm.html">Interactive Form</a>,
 			<a href="cs/web/metadata.html">Metadata</a>,
 			<a href="cs/web/pseudo-elements.html">Pseudo-elements</a>,
