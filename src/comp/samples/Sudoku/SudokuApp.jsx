@@ -34,28 +34,49 @@ export function squareItemToRowColumn(square, item){
 }
 
 export function rowColumnToSquareItem(row, column){
-	const square   	= floor(row / 3) + floor(column / 3)
+	const square   	= 3*floor(row / 3) + floor(column / 3)
 	const subrow   	= row % 3
 	const subcolumn	= column % 3
 	const item     	= 3 * subrow + subcolumn
 	return [square, item]
 }
 
+function getNeighbors([square, item]) {
+	const [row, column] = squareItemToRowColumn(square, item)
+	let neighbors = []
+	//find all neighbors
+	for (var i = 0; i < 9; i++){
+		neighbors.push(rowColumnToSquareItem(i, column))
+		neighbors.push(rowColumnToSquareItem(row, i))
+		neighbors.push([square, i])
+	}
+	//convert to string
+	neighbors = neighbors.map( val => JSON.stringify(val) )
+	//get unique elements
+	neighbors = new Set(neighbors)
+
+	return neighbors;
+}
+
 export default function SudokuApp(props) {
 	//state vars
 	let [board, setBoard] = useState([
-			[null,null,null,null,null,null,null,null,null],
-			[null,null,null,null,null,null,null,null,null],
-			[null,null,null,null,null,null,null,null,null],
-			[null,null,null,null,null,null,null,null,null],
-			[null,null,null,null,null,null,null,null,null],
+			[1,null,null,null,null,null,null,null,null],
+			[null,2,null,null,null,null,null,null,null],
+			[null,null,3,null,null,null,null,null,null],
+			[null,null,null,4,null,null,null,null,null],
+			[null,null,null,null,5,null,null,null,null],
 			[null,null,null,null,null,null,null,null,null],
 			[null,null,null,null,null,null,null,null,null],
 			[null,null,null,null,null,null,null,null,null],
 			[null,null,null,null,null,null,null,null,null],
 		])
 	let [selectedCell, setSelectedCell] = useState([null, null])
-
+	let [neighbors, setNeighbors] = useState(new Set())
+	const handleClick = ([square, item]) => {
+		setSelectedCell([square, item])
+		setNeighbors(getNeighbors([square, item]))
+	}
 	const handleKeyPress = (event) => {
 		const { key } = event;
 
@@ -87,7 +108,9 @@ export default function SudokuApp(props) {
 							key={index} 
 							square={index} 
 							values={miniGridValues} 
-							setSelected={setSelectedCell}/>
+							neighbors={neighbors}
+							selected={JSON.stringify(selectedCell)}
+							setSelected={handleClick}/>
 					))}
 				</MiniGridContainer>
 				</div>
