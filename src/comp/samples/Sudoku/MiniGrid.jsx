@@ -17,12 +17,12 @@ const MiniGridContainer = styled.div`
 
 
 
-const MiniGrid = ({ values, square, setSelected, neighbors, selected}) => {
+const MiniGrid = ({ values, square, setSelected}) => {
 
   return (
     <MiniGridContainer>
       {values.map((value, index) => (
-        <Cell key={index} square={square} item={index} value={value} setSelected={setSelected} neighbors={neighbors} selected={selected}/>
+        <Cell key={index} square={square} item={index} value={value} setSelected={setSelected}/>
       ))}
     </MiniGridContainer>
   );

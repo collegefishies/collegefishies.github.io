@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { squareItemToRowColumn } from './SudokuApp';
+import { squareItemToRowColumn, SudokuContext } from './SudokuApp';
 
 function color(isSelected, isNeighbor) {
   if (isSelected) {
@@ -23,11 +23,12 @@ const CellContainer = styled.div`
   justify-content: center;
   font-size: 35px;
   background-color: ${props => color(props.$isSelected, props.$isNeighbor)}
-
 `
 
-const Cell = ({ value, square, item, setSelected, neighbors, selected}) => {
+const Cell = ({ value, square, item, setSelected}) => {
+  const { selectedCell, neighbors } = React.useContext(SudokuContext)
   const curr = JSON.stringify([square, item])
+  const selected = JSON.stringify(selectedCell)
   const isSelected = curr == selected
   const isNeighbor = neighbors.has(curr)
 

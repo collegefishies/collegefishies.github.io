@@ -15,7 +15,6 @@ const Card = styled.div`
 	box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 `;
-
 const Board = styled.div`
 	font-weight: 100;
 	padding: 0;
@@ -58,6 +57,8 @@ function getNeighbors([square, item]) {
 	return neighbors;
 }
 
+export const SudokuContext = React.createContext();
+
 export default function SudokuApp(props) {
 	//state vars
 	let [board, setBoard] = useState([
@@ -87,6 +88,11 @@ export default function SudokuApp(props) {
 				newBoard[square][item] = Number(key)
 				setBoard(newBoard) 
 			}
+		} else if (key == 'Backspace') {
+			let [square, item] = selectedCell;
+			let newBoard = [...board]
+			newBoard[square][item] = null
+			setBoard(newBoard)
 		}
 	}
 
@@ -98,24 +104,24 @@ export default function SudokuApp(props) {
 	}, [selectedCell])
 
 	return (
-		<Card>
-			<h1>Sudoku</h1>
-			<Board>
-				<div style={{outline: '1px solid black'}}>
-				<MiniGridContainer>
-					{board.map((miniGridValues, index) => (
-						<MiniGrid 
-							key={index} 
-							square={index} 
-							values={miniGridValues} 
-							neighbors={neighbors}
-							selected={JSON.stringify(selectedCell)}
-							setSelected={handleClick}/>
-					))}
-				</MiniGridContainer>
-				</div>
-			</Board>
-		</Card>
+		<SudokuContext.Provider value={{ selectedCell, neighbors }}>
+			<Card>
+				<h1>Sudoku</h1>
+				<Board>
+					<div style={{outline: '1px solid black'}}>
+					<MiniGridContainer>
+						{board.map((miniGridValues, index) => (
+							<MiniGrid 
+								key={index} 
+								square={index} 
+								values={miniGridValues} 
+								setSelected={handleClick}/>
+						))}
+					</MiniGridContainer>
+					</div>
+				</Board>
+			</Card>
+		</SudokuContext.Provider>
 	);
 }
 
