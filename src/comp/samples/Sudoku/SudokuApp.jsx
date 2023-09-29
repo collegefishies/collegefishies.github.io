@@ -189,7 +189,6 @@ export default function SudokuApp(props) {
 	let [initialBoard] = useState(initializeBoard(puzzle_choice));
 	let [selectedCell, setSelectedCell] = useState([null, null])
 	let [neighbors, setNeighbors] = useState(new Set())
-	let [textColor, setTextColor] = useState('blue')
 
 	const ArrowKeys = new Set(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'])
 	const handleClick = ([square, item]) => {
@@ -236,7 +235,6 @@ export default function SudokuApp(props) {
 
 	useEffect(()=>{
 		console.log("in useeffect")
-		setTextColor('blue')
 		window.addEventListener('keydown', handleKeyDown);
 		return () => {
 			window.removeEventListener('keydown', handleKeyDown)
@@ -244,7 +242,7 @@ export default function SudokuApp(props) {
 	}, [selectedCell, handleKeyDown])
 
 	return (
-		<SudokuContext.Provider value={{ selectedCell, neighbors, textColor }}>
+		<SudokuContext.Provider value={{ selectedCell, neighbors }}>
 			<Card>
 				<h1>Sudoku</h1>
 				<Board>
