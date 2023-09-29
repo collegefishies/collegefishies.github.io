@@ -74,32 +74,55 @@ export default function SudokuApp(props) {
 		])
 	let [selectedCell, setSelectedCell] = useState([null, null])
 	let [neighbors, setNeighbors] = useState(new Set())
+
+	const ArrowKeys = new Set(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'])
 	const handleClick = ([square, item]) => {
 		setSelectedCell([square, item])
 		setNeighbors(getNeighbors([square, item]))
 	}
-	const handleKeyPress = (event) => {
+	const handleKeyDown = (event) => {
 		const { key } = event;
+		let [square, item] = selectedCell;
+		if (square == null || item == null) {
+			return;
+		}
 
 		if (key >= '1' && key <= '9') {
-			let [square, item] = selectedCell;
-			if (square != null && item != null) {
-				let newBoard = [...board]
-				newBoard[square][item] = Number(key)
-				setBoard(newBoard) 
-			}
+			let newBoard = [...board]
+			newBoard[square][item] = Number(key)
+			setBoard(newBoard) 
 		} else if (key == 'Backspace') {
-			let [square, item] = selectedCell;
 			let newBoard = [...board]
 			newBoard[square][item] = null
 			setBoard(newBoard)
+		}  else if (ArrowKeys.has(key)) {
+			console.log(key)
+			event.preventDefault();
+			console.log(selectedCell)
+			let [row, column] = squareItemToRowColumn(...selectedCell);
+			console.log(row, column)
+			switch (key) {
+			case 'ArrowUp':
+				row = Math.max(row - 1, 0); break;
+			case 'ArrowDown':
+				row = Math.min(row + 1, 8); break;
+			case 'ArrowRight':
+				column = Math.min(column + 1, 8); break;
+			case 'ArrowLeft':
+				column = Math.max(column - 1, 0); break;
+			}
+
+			console.log([row, column])
+			setSelectedCell(rowColumnToSquareItem(row, column))
+			setNeighbors(getNeighbors(rowColumnToSquareItem(row, column)))
 		}
 	}
 
 	useEffect(()=>{
-		window.addEventListener('keypress', handleKeyPress);
+		console.log(selectedCell)
+		window.addEventListener('keydown', handleKeyDown);
 		return () => {
-			window.removeEventListener('keypress', handleKeyPress)
+			window.removeEventListener('keydown', handleKeyDown)
 		}
 	}, [selectedCell])
 
