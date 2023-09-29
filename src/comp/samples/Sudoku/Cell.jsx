@@ -22,11 +22,12 @@ const CellContainer = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 35px;
+  color: ${props => props.$textColor}
   background-color: ${props => color(props.$isSelected, props.$isNeighbor)}
 `
 
 const Cell = ({ value, square, item, setSelected}) => {
-  const { selectedCell, neighbors } = React.useContext(SudokuContext)
+  const { selectedCell, neighbors, textColor } = React.useContext(SudokuContext)
   const curr = JSON.stringify([square, item])
   const selected = JSON.stringify(selectedCell)
   const isSelected = curr == selected
@@ -36,7 +37,8 @@ const Cell = ({ value, square, item, setSelected}) => {
     <CellContainer 
       onClick={() => setSelected([square, item])} 
       $isSelected={isSelected} 
-      $isNeighbor={isNeighbor}>
+      $isNeighbor={isNeighbor}
+      $textColor={textColor}>
       {value !== 0 ? value : ''}
     </CellContainer>
   );
