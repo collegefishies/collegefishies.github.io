@@ -1,3 +1,46 @@
+/**
+ * SudokuApp Component
+ * 
+ * This is the main component for the Sudoku game application.
+ * 
+ * Functionalities:
+ * 1. Initializes an empty 9x9 Sudoku board with some pre-filled cells.
+ * 2. Allows users to click to select a cell.
+ * 3. Keyboard inputs are captured to fill the selected cell with numbers 1-9 or to clear it.
+ * 4. Arrow keys can be used to navigate through the board's cells.
+ * 5. Utilizes SudokuContext to share state like selected cells and their neighbors.
+ * 
+ * Grid Structure and Coordinate System:
+ * - The 9x9 grid is divided into nine 3x3 "mini-grids" or "squares."
+ * - `square`: Refers to one of these 3x3 mini-grids. The squares are indexed from 0 to 8.
+ * - `item`: Refers to a cell within a 3x3 square. Items are also indexed from 0 to 8.
+ * - Together, `[square, item]` uniquely identifies any cell within the 9x9 grid.
+ * - Helper functions `squareItemToRowColumn` and `rowColumnToSquareItem` are used for conversions between these coordinate systems and the traditional row-column system.
+ * 
+ * State Variables:
+ * - board: Represents the 9x9 Sudoku board where each mini-grid is an array of 9 numbers or null.
+ * - selectedCell: Contains the coordinates ([square, item]) of the currently selected cell.
+ * - neighbors: Contains the set of neighboring cells for the currently selected cell.
+ * 
+ * Helper Functions:
+ * - squareItemToRowColumn: Converts square and item coordinates to row and column coordinates.
+ * - rowColumnToSquareItem: Converts row and column coordinates to square and item coordinates.
+ * - getNeighbors: Returns a set of neighboring cells for a given cell.
+ * 
+ * Event Handlers:
+ * - handleClick: Handles cell selection upon user click.
+ * - handleKeyDown: Handles keyboard inputs to manipulate the board and selected cell.
+ * 
+ * Dependencies:
+ * - Cell Component: Represents an individual cell in the Sudoku board.
+ * - MiniGrid Component: Represents a 3x3 grid in the Sudoku board.
+ * - styled-components: For component styling.
+ * - React's useState, useEffect: For state management and side-effects.
+ * 
+ * @author Enrique Mendez
+ * @version 1.0
+ */
+
 //sudokuapp.jsx
 import React, { useRef, useState, useEffect} from 'react';
 import styled from 'styled-components';
