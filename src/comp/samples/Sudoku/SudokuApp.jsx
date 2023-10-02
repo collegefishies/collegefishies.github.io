@@ -127,8 +127,7 @@ const Card = styled.div`
 const Board = styled.div`
 	font-weight: 100;
 	padding: 0;
-	aspect-ratio: 1;
-	// display: flex;
+	aspect-ratio: 1 /;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -234,7 +233,6 @@ export default function SudokuApp(props) {
 	}, [selectedCell, board])
 
 	useEffect(()=>{
-		console.log("in useeffect")
 		window.addEventListener('keydown', handleKeyDown);
 		return () => {
 			window.removeEventListener('keydown', handleKeyDown)
@@ -246,7 +244,6 @@ export default function SudokuApp(props) {
 			<Card>
 				<h1>Sudoku</h1>
 				<Board>
-					<div style={{outline: '1px solid black'}}>
 					<MiniGridContainer>
 						{board.map((miniGridValues, index) => (
 							<MiniGrid 
@@ -256,7 +253,6 @@ export default function SudokuApp(props) {
 								setSelected={handleClick}/>
 						))}
 					</MiniGridContainer>
-					</div>
 				</Board>
 			</Card>
 		</SudokuContext.Provider>

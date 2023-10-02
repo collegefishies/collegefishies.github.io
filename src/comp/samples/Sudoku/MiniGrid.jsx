@@ -7,9 +7,10 @@ import Cell from './Cell';  // Import the Cell component
 
 const MiniGridContainer = styled.div`
   position: relative;
+  aspect-ratio: 1 / 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  grid-template-rows: repeat(3, minmax(0,1fr));
   outline: 1px solid black;
   outline-offset: -1px
 `;
