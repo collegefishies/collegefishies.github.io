@@ -15,7 +15,7 @@ const NavLink = styled(Link)`
 `
 
 const LI = styled.li`
-margin: 1rem;
+  margin: 1rem;
 `
 
 export default function NavToBurger(props) {

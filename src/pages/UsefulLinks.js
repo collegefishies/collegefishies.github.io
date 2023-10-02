@@ -7,9 +7,7 @@ import Row from 'react-bootstrap/Row'
 function Main() {
 	return ( 
 			<ContentArea>
-				<Row>
-					<Sidebar forceVisible={true}/>
-				</Row>
+						<Sidebar forceVisible={true}/>
 			</ContentArea>
 	); 
 } 

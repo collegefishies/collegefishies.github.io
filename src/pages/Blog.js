@@ -16,7 +16,6 @@ function Blog() {
 	return ( 
 			<ContentArea>
 				<Row>
-					{/*<Sidebar />*/}
 					<Content title="Blog">
 						{blog.posts.map(returnPostComponent)}
 					</Content>

@@ -1076,245 +1076,27 @@ body .markdown-body
 .highlight .vi{color:teal}
 .highlight .il{color:#009999}
 .highlight .gc{color:#999;background-color:#EAF2F5}
-</style><title>grid_flexbox</title></head><body><article class="markdown-body"><h1 id="grids-and-flexbox-cheat-sheet">Grids and Flexbox Cheat Sheet<a class="headerlink" href="#grids-and-flexbox-cheat-sheet" title="Permanent link"></a></h1>
-<p><strong>Note</strong>: &lsquo;|&rsquo; stands for alternatives or OR.</p>
-<h1 id="grid-layout-in-css">Grid Layout in CSS<a class="headerlink" href="#grid-layout-in-css" title="Permanent link"></a></h1>
-<p>The Grid layout in CSS enables the creation of complex two-dimensional layouts for web pages. It&rsquo;s defined by a set of properties applied to a container and its child elements. </p>
-<h2 id="syntax-for-creating-a-grid">Syntax for Creating a Grid<a class="headerlink" href="#syntax-for-creating-a-grid" title="Permanent link"></a></h2>
-<p>To designate a container as a grid container, use the following:</p>
-<div class="highlight"><pre><span class="nt">selector</span> <span class="p">{</span>
-  <span class="k">display</span><span class="o">:</span> <span class="n">grid</span><span class="p">;</span> <span class="c">/* or inline-grid for inline-level grids */</span>
-<span class="p">}</span>
-</pre></div>
-
-<h2 id="grid-shorthand-properties">Grid Shorthand Properties<a class="headerlink" href="#grid-shorthand-properties" title="Permanent link"></a></h2>
-<p>You can use the <code>grid</code> shorthand to specify various properties related to grid layout. However, it&rsquo;s often more maintainable to use the individual properties for clearer code.</p>
-<h3 id="grid-template-rows">grid-template-rows<a class="headerlink" href="#grid-template-rows" title="Permanent link"></a></h3>
+</style><title>color-scheme</title></head><body><article class="markdown-body"><h1 id="creating-themes">Creating themes<a class="headerlink" href="#creating-themes" title="Permanent link"></a></h1>
+<p>The combination of colors used in the design of a website is called the color scheme. Colors are one of the most important components of any website today because it sets the tone for the viewer. For the optimal use of colors, web developers make use of color theory and color schemes.    </p>
+<h2 id="color-schemes">Color schemes<a class="headerlink" href="#color-schemes" title="Permanent link"></a></h2>
+<p>Fundamentally all colors are a combination of the three colors: red, yellow, and blue. These are called the primary colors. Secondary colors like orange, purple and green are a combination of two primary colors. Finally, there are six tertiary colors formed from a combination of the three primaries with secondary colors. By adding more black or more white you can create lighter or darker tints of each color. All of these colors and tints make up a color wheel of 12 colors. This color wheel is the foundation for any color scheme.    </p>
+<p>Depending on the relative positions of colors on the wheel, there are seven commonly identified color schemes according to color theory that can be used for maximum appeal. These are:     </p>
 <ul>
-<li><strong>Default Value</strong>: <code>none</code></li>
-<li><strong>Description</strong>: Specifies the size of the rows in the grid layout.</li>
+<li>Monochromatic  </li>
+<li>Analogous  </li>
+<li>Complementary  </li>
+<li>Split complimentary  </li>
+<li>Triadic   </li>
+<li>Square and   </li>
+<li>Rectangle  </li>
 </ul>
-<div class="highlight"><pre><span class="nc">.grid-container</span> <span class="p">{</span>
-  <span class="n">grid</span><span class="o">-</span><span class="n">template</span><span class="o">-</span><span class="n">rows</span><span class="o">:</span> <span class="m">100px</span> <span class="m">200px</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-<h3 id="grid-template-columns">grid-template-columns<a class="headerlink" href="#grid-template-columns" title="Permanent link"></a></h3>
-<ul>
-<li><strong>Default Value</strong>: <code>none</code></li>
-<li><strong>Description</strong>: Specifies the size of the columns in the grid layout.</li>
-</ul>
-<div class="highlight"><pre><span class="nc">.grid-container</span> <span class="p">{</span>
-  <span class="n">grid</span><span class="o">-</span><span class="n">template</span><span class="o">-</span><span class="n">columns</span><span class="o">:</span> <span class="m">50%</span> <span class="m">50%</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-<h3 id="grid-template-areas">grid-template-areas<a class="headerlink" href="#grid-template-areas" title="Permanent link"></a></h3>
-<ul>
-<li><strong>Default Value</strong>: <code>none</code></li>
-<li><strong>Description</strong>: Defines a grid template by specifying named grid areas.</li>
-</ul>
-<div class="highlight"><pre><span class="nc">.grid-container</span> <span class="p">{</span>
-  <span class="n">grid</span><span class="o">-</span><span class="n">template</span><span class="o">-</span><span class="n">areas</span><span class="o">:</span> <span class="s2">&quot;header header&quot;</span> <span class="s2">&quot;nav content&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-<h3 id="grid-auto-rows">grid-auto-rows<a class="headerlink" href="#grid-auto-rows" title="Permanent link"></a></h3>
-<ul>
-<li><strong>Default Value</strong>: <code>auto</code></li>
-<li><strong>Description</strong>: Sets the size for rows that are not explicitly defined.</li>
-</ul>
-<div class="highlight"><pre><span class="nc">.grid-container</span> <span class="p">{</span>
-  <span class="n">grid</span><span class="o">-</span><span class="k">auto</span><span class="o">-</span><span class="n">rows</span><span class="o">:</span> <span class="n">minmax</span><span class="p">(</span><span class="m">100px</span><span class="o">,</span> <span class="k">auto</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-
-<h3 id="grid-auto-columns">grid-auto-columns<a class="headerlink" href="#grid-auto-columns" title="Permanent link"></a></h3>
-<ul>
-<li><strong>Default Value</strong>: <code>auto</code></li>
-<li><strong>Description</strong>: Sets the size for columns that are not explicitly defined.</li>
-</ul>
-<div class="highlight"><pre><span class="nc">.grid-container</span> <span class="p">{</span>
-  <span class="n">grid</span><span class="o">-</span><span class="k">auto</span><span class="o">-</span><span class="n">columns</span><span class="o">:</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-<h3 id="grid-auto-flow">grid-auto-flow<a class="headerlink" href="#grid-auto-flow" title="Permanent link"></a></h3>
-<ul>
-<li><strong>Default Value</strong>: <code>row</code></li>
-<li><strong>Description</strong>: Controls the direction in which new grid items are placed when they don’t fit into existing rows or columns.</li>
-</ul>
-<div class="highlight"><pre><span class="nc">.grid-container</span> <span class="p">{</span>
-  <span class="n">grid</span><span class="o">-</span><span class="k">auto</span><span class="o">-</span><span class="n">flow</span><span class="o">:</span> <span class="n">column</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-<h3 id="column-gap">column-gap<a class="headerlink" href="#column-gap" title="Permanent link"></a></h3>
-<ul>
-<li><strong>Default Value</strong>: <code>normal</code></li>
-<li><strong>Description</strong>: Sets the gap (spacing) between columns.</li>
-</ul>
-<div class="highlight"><pre><span class="nc">.grid-container</span> <span class="p">{</span>
-  <span class="n">column</span><span class="o">-</span><span class="n">gap</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-<h3 id="row-gap">row-gap<a class="headerlink" href="#row-gap" title="Permanent link"></a></h3>
-<ul>
-<li><strong>Default Value</strong>: <code>normal</code></li>
-<li><strong>Description</strong>: Sets the gap (spacing) between rows.</li>
-</ul>
-<div class="highlight"><pre><span class="nc">.grid-container</span> <span class="p">{</span>
-  <span class="n">row</span><span class="o">-</span><span class="n">gap</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-<hr />
-<h3 id="grid-properties-for-container">Grid Properties for Container<a class="headerlink" href="#grid-properties-for-container" title="Permanent link"></a></h3>
-<ul>
-<li>
-<p><code>grid-template-columns: measurement units | % units | repeat()</code>: Defines the line names and maintains a constant size of column items. Can accept a range of different measurement sizes.</p>
-</li>
-<li>
-<p><code>grid-template-rows: measurement units | % units | repeat()</code>: Defines the line names and maintains a constant size of rows. Can accept a range of different measurement sizes.</p>
-</li>
-<li>
-<p><code>grid-auto-columns: measurement unit (fixed value for all columns)</code>: Determines the default size for columns that have not been explicitly configured.</p>
-</li>
-<li>
-<p><code>grid-auto-rows: measurement unit (fixed value for all rows)</code>: Determines the default size for rows that have not been explicitly configured.</p>
-</li>
-<li>
-<p><code>grid-template: "header header" auto "main right" 75vh "footer footer" 20rem</code>: This allows you to define and maintain named cells on a grid. For example, it defines two cells named &ldquo;header&rdquo; and &ldquo;header&rdquo; with auto sizing, two cells named &ldquo;main&rdquo; and &ldquo;right&rdquo; with a sizing of 75% of the viewport height, and two cells named &ldquo;footer&rdquo; and &ldquo;footer&rdquo; with a sizing of 20 root em (rem), relative to the HTML font size.</p>
-</li>
-</ul>
-<h3 id="gap">Gap<a class="headerlink" href="#gap" title="Permanent link"></a></h3>
-<ul>
-<li>
-<p><code>grid-gap: measurement units</code>: Determines the gap between rows and columns.</p>
-</li>
-<li>
-<p><code>grid-column-gap: measurement units</code>: Determines the gap between columns.</p>
-</li>
-<li>
-<p><code>grid-row-gap: m-unit-1 m-unit-2</code>: Determines the gap between columns.</p>
-</li>
-</ul>
-<h3 id="alignment">Alignment<a class="headerlink" href="#alignment" title="Permanent link"></a></h3>
-<ul>
-<li>
-<p><code>justify-items: start | center | end | stretch</code>: Defines the default space that is allotted to each item on the grid.</p>
-</li>
-<li>
-<p><code>align-items: start | center | end | stretch</code>: Defines the default space related to an item along the grid’s block axis.</p>
-</li>
-<li>
-<p><code>place-items: start | stretch /* shorthand for two properties above */</code>: This feature allows you to align items with the block and inline directions.</p>
-</li>
-</ul>
-<h3 id="justification">Justification<a class="headerlink" href="#justification" title="Permanent link"></a></h3>
-<ul>
-<li>
-<p><code>justify-content: start | center | end | stretch | space-between | space-evenly | space-around</code>: Defines browser allocation of space to content items in relation to the main-axis.</p>
-</li>
-<li>
-<p><code>align-content: start | center | end | stretch | space-between | space-evenly | space-around</code>: Defines browser allocation of space to content items in relation to the cross-axis and block axis.</p>
-</li>
-<li>
-<p><code>place-content: center | start</code>: This feature allows you to align items with the block and inline directions.</p>
-</li>
-</ul>
-<h3 id="positioning">Positioning<a class="headerlink" href="#positioning" title="Permanent link"></a></h3>
-<ul>
-<li>
-<p><code>grid-auto-flow: row | column | dense</code>: This relates to how the items are placed automatically within the grid.</p>
-</li>
-<li>
-<p><code>grid-auto-columns: measurement units</code>: This relates to the size for columns created without specific size specifications.</p>
-</li>
-<li>
-<p><code>grid-auto-rows: measurement units</code>: This relates to the size for rows created without specific size specifications.</p>
-</li>
-</ul>
-<h2 id="grid-properties-for-items-child">Grid Properties for Items (Child)<a class="headerlink" href="#grid-properties-for-items-child" title="Permanent link"></a></h2>
-<ul>
-<li>
-<p><code>grid-column: column position /* E.g. 1/2 */</code>: Allows specifying where on the grid the column is to start.</p>
-</li>
-<li>
-<p><code>grid-column-start: column start position</code>: Determines the starting column position an item is placed on a grid.</p>
-</li>
-<li>
-<p><code>grid-column-end: column end position</code>: Determines the end column position an item is placed on a grid.</p>
-</li>
-<li>
-<p><code>grid-row: row position /* E.g. 1/2 */</code>: Allows specifying where on the grid the row is to start.</p>
-</li>
-<li>
-<p><code>grid-row-start: row start position</code>: Determines the starting row position an item is placed on a grid.</p>
-</li>
-<li>
-<p><code>grid-row-end: row end position</code>: Determines the end row position an item is placed on a grid.</p>
-</li>
-</ul>
-<h3 id="justification-and-alignment">Justification and Alignment<a class="headerlink" href="#justification-and-alignment" title="Permanent link"></a></h3>
-<ul>
-<li>
-<p><code>justify-self: start | center | end | stretch</code>: Determines how an item is positioned inside its aligned container in relation to the appropriate axis.</p>
-</li>
-<li>
-<p><code>align-self: start | center | end | stretch</code>: Aligns an item within a grid area.</p>
-</li>
-<li>
-<p><code>place-self: start | stretch /* shorthand for two properties above */</code>: This setting lets you align and justify an item within a block.</p>
-</li>
-</ul>
-<h2 id="flexbox">Flexbox<a class="headerlink" href="#flexbox" title="Permanent link"></a></h2>
-<p>The syntax for creating a flexbox:</p>
-<div class="highlight"><pre><span class="nt">selector</span> <span class="p">{</span>
-    <span class="k">display</span><span class="o">:</span> <span class="n">flex</span> <span class="o">|</span> <span class="k">inline</span><span class="o">-</span><span class="n">flex</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-<p>Here, the selector can refer to any of the following flex attributes:</p>
-<ul>
-<li>Attribute selector</li>
-<li>Class Selector</li>
-<li>ID Selector</li>
-<li>Type Selectors</li>
-<li>Universal Selectors</li>
-</ul>
-<p>The <code>display</code> relates to how you want the selector to be shown. Setting <code>display</code> to <code>flex</code> makes the given selector a flexbox. Setting <code>display</code> to <code>inline-flex</code> makes the selector a flexbox container while being inline.</p>
-<h3 id="properties-for-flexbox-container">Properties for Flexbox Container<a class="headerlink" href="#properties-for-flexbox-container" title="Permanent link"></a></h3>
-<ul>
-<li>
-<p><code>flex-direction: row | row-reverse | column | column-reverse</code>: It is possible to specify the direction your elements will follow.</p>
-</li>
-<li>
-<p><code>flex-wrap: wrap | nowrap</code>: The standard layout is to plot the elements from left to right in a straight line. The wrap feature allows you to customize this to match the size of the window displaying the page.</p>
-</li>
-<li>
-<p><code>align-items: flex-start | flex-end | center | stretch</code>: This determines how the flex items are to be positioned on the page.</p>
-</li>
-<li>
-<p><code>justify-content: flex-start | flex-end | center | space-between | space-evenly</code>: <code>justify-content</code> determines the alignment of the flex items.</p>
-</li>
-</ul>
-<h3 id="properties-for-flexbox-items-child">Properties for Flexbox Items (Child)<a class="headerlink" href="#properties-for-flexbox-items-child" title="Permanent link"></a></h3>
-<ul>
-<li>
-<p><code>flex-grow: factor of flex’s main size</code>: This attribute enables the flex container to grow proportionally to the other containers present.</p>
-</li>
-<li>
-<p><code>flex-shrink: factor of flex’s main size</code>: This allows elements to shrink in relation to items around it.</p>
-</li>
-<li>
-<p><code>flex-basis: auto | factor of main’s size | measurement unit</code>: This sets the initial main size of an item. It can be overridden if other stylized elements are configured.</p>
-</li>
-<li>
-<p><code>order: position in flex /* Set ascending by default */</code>: The standard positioning of items is by source order, however, this feature will enable you to configure where the items appear on the page.</p>
-</li>
-<li>
-<p><code>align-self: start | center | end | stretch</code>: This determines where on the page the child items will be positioned. Similar to the main flex attributes, start is to the left and end is to the right.</p>
-</li>
-</ul></article></body></html>
+<p>The different combinations are represented in the image below.       </p>
+<p><img alt="Different color combinations on the color wheel that are based on the relative position of colors to others." src="/cs/web/color-wheel.png" />
+Image source: <a href="https://www.moving.com/tips/how-to-choose-a-color-scheme-for-your-home/">https://www.moving.com/tips/how-to-choose-a-color-scheme-for-your-home/</a></p>
+<h2 id="using-the-color-schemes">Using the color schemes<a class="headerlink" href="#using-the-color-schemes" title="Permanent link"></a></h2>
+<p>Each of the different color schemes are used with the purpose of enhancing a website. While you can pick any of the different schemes, a practiced UX designer will consider whether a specific type of color scheme is more suitable for certain websites than others. For example, complementary colors are well-suited for websites that will have bars and charts. It also depends on several other factors such as the number of colors that you are going to need for your webpage, the topic and domain of the webpage, user demographics of the readers and so on. For example, an informational website for medical services will typically have a white background. Other than the color schemes mentioned, even achromatic themes with only black and white color can be appealing if styling and design is well presented.</p>
+<h2 id="factors-to-consider-for-themes-and-colors">Factors to consider for themes and colors<a class="headerlink" href="#factors-to-consider-for-themes-and-colors" title="Permanent link"></a></h2>
+<p>While color schemes serve as a guide for picking website colors, there are some factors that must be considered in the process. The user experience must be of the utmost priority as a good webpage must be able to sustain the attention of the reader without overwhelming them. A good webpage will have a good balance of information and design elements. An unbalanced web design can lead to what we call as cognitive overload. Cognitive overload is when too much information or activity is presented to the user which may be detrimental to the user experience.</p>
+<p>There is a field of research in psychology that focuses on the effects color has on the mood of a user. Nature-inspired color tones are almost universally seen to be more pleasant and add aesthetic value. As people are increasingly spending time on the internet, a good theme may make or break the appeal of a webpage. Often, it is a good idea to keep a palette of more than one color combination on hand so you can experiment with your webpage.  </p>
+<p>A color theme on a website also plays a role in other aspects beyond the aesthetics and help in shaping the user experience of the website. A simple theme with appropriate color combinations can help a user navigate the website by creating a visual hierarchy. If for example, a user observes a specific color scheme for the subheadings, they will be able to understandwhere to look for certain information on the web page. This means you can avoid excessive design elements such as line-breaks and grids where they are not adding to the appeal of the web page.</p>
+<p>While the experience of choosing the right colors for your website is a process of trial and error, inspiration can be drawn from a webpage that has held a personal appeal. Color theory is an important aspect of the user experience domain and plays an important role in website design so don’t be afraid to experiment with different color schemes.    </p></article></body></html>
