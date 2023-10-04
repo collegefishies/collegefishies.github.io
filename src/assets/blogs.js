@@ -27,7 +27,7 @@ export const blog = {
 			"title": "Trying my hand at Sudoku.",
 			"date": "09/25/23",
 			"content": <>
-			<p> Mostly recovered. Trying to make a Sudoku Component. I want it to be fully responsive. So I'm trying to force the text to resize according to the number cells, and it's incredibly annoying. I'll get there though.</p>
+			<p> Mostly recovered. Trying to make a Sudoku Component. I want it to be fully responsive. So I'm trying to force the text to resize according to the number cells, and it's incredibly annoying. I'll get there though. <b>Edit:</b> Completed! Check the design samples section!</p>
 			<Image src={sudoku} />
 			</>
 		},

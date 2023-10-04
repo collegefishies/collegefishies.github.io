@@ -19,6 +19,8 @@ function Sample(props){
 	return (
 		<SampleStyle>
 			<h3>{props.title}</h3>
+			<br />
+			{props.description ? <p>{props.description}</p>:null}
 			{props.children}
 		</SampleStyle>
 	)
@@ -30,8 +32,11 @@ function Main() {
 				<Row>
 					{/*<Sidebar />*/}
 					<Content title="Samples">
+						<Sample title="Sudoku" description="A simple Sudoku app written for keyboard usage.">
+							<SudokuApp /> 
+						</Sample>
 						<Sample title="Age Calculator"> <AgeCalculator /> </Sample>
-						<Sample title="Sudoku"> <SudokuApp /> </Sample>
+						
 					</Content>
 				</Row>
 			</ContentArea>
