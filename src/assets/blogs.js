@@ -24,6 +24,11 @@ const ImageLink = styled.img`
 export const blog = {
 	"posts": [
 		{
+			"title": "Just learned how to fetch data!",
+			"date": "10/04/23",
+			"content": "One of the hallmarks of programming is asynchronous programming, which is really useful only for slow events, inputs, data fetching. I just implemented my first real data fetching in the 'Fetch Random Person' sample I just uploaded!"
+		},
+		{
 			"title": "Trying my hand at Sudoku.",
 			"date": "09/25/23",
 			"content": <>

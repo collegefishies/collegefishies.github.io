@@ -121,7 +121,7 @@ const Card = styled.div`
 	font-family: 'Arial Rounded MT Bold';
 	padding: 1rem 2rem 2rem 2rem;
 	background: #F5F6F8;
-	box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.25);
+	box-shadow: 1rem 1rem 1rem rgb(0,0,0,0.4);
 	border-radius: 10px;
 `;
 const Board = styled.div`

@@ -32,7 +32,7 @@ function Main() {
 				<Row>
 					{/*<Sidebar />*/}
 					<Content title="Samples">
-						<Sample title="Fetch Random Users">
+						<Sample title="Fetch Random Users" description={<p>Design inspired by <a href="https://randomuser.me">randomuser.me</a></p>}>
 							<RandomUser />
 						</Sample>
 						<Sample title="Sudoku" description="A simple Sudoku app written for keyboard usage.">
