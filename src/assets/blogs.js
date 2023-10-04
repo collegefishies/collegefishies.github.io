@@ -85,7 +85,33 @@ export const blog = {
 		{
 			"title": "HTML Practice",
 			"date": "09/15/23",
-			"content": "I've been taking a Front-end dev course on Coursera from Meta, and while I am learning. I am not mastering. I have a better top down understanding of the field of web dev, but to really get my hands dirty, I need something to make. Unfortunately, since web-dev isn't just programming, it is programming with design, I need designs to copy off of. So I think a great route to get practice is to find websites to copy, and without looking at their source, try and reproduce their designs. I wonder if there is a website that does this with proceedingly difficult website layouts."
+			"content": (
+				<>
+					I've been taking a Front-end dev course on Coursera from Meta, and while I am learning. I am not mastering. I have a better top down understanding of the field of web dev, but to really get my hands dirty, I need something to make. <br /><br />Unfortunately, since web-dev isn't just programming, it is programming with design, I need designs to copy off of. So I think a great route to get practice is to find websites to copy, and without looking at their source, try and reproduce their designs. I wonder if there is a website that does this with proceedingly difficult website layouts.
+					<br />
+					<br />
+					<div class="alert alert-info">
+						<b>💡 GPT says:</b>
+						<ul>
+						  <li>
+							<strong>Frontend Mentor</strong> - This platform offers real-world projects along with designs. You have to code the solution yourself. The projects are of varying difficulties and can help you sharpen both your HTML/CSS and JavaScript skills.
+						  </li>
+						  <li>
+							<strong>Codewell</strong> - Provides design templates and asks you to replicate them using HTML/CSS. They offer solutions as well, so you can check your work.
+						  </li>
+						  <li>
+							<strong>LeetCode</strong> - While primarily known for algorithmic challenges, they have a Frontend card that includes some HTML/CSS challenges.
+						  </li>
+						  <li>
+							<strong>CSS Battle</strong> - This is more of a game than a project-based platform, but it's good for practicing CSS. You're given a design and you have to replicate it using minimal CSS.
+						  </li>
+						  <li>
+							<strong>Exercism</strong> - This platform offers language tracks, including HTML and JavaScript. While it doesn't specifically focus on cloning websites, it does offer bite-sized exercises that can help improve your web development skills.
+						  </li>
+						</ul>
+					</div>
+				</>
+			)
 		}
 	]
 }
