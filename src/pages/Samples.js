@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col'
 //import Samples
 import AgeCalculator from '../comp/samples/AgeCalculator/AgeCalculator'
 import SudokuApp from '../comp/samples/Sudoku/SudokuApp'
-
+import RandomUser from '../comp/samples/FetchUsers/RandomUser'
 
 const SampleStyle = styled.div`
 margin-bottom: 3rem;
@@ -32,11 +32,13 @@ function Main() {
 				<Row>
 					{/*<Sidebar />*/}
 					<Content title="Samples">
+						<Sample title="Fetch Random Users">
+							<RandomUser />
+						</Sample>
 						<Sample title="Sudoku" description="A simple Sudoku app written for keyboard usage.">
 							<SudokuApp /> 
 						</Sample>
 						<Sample title="Age Calculator"> <AgeCalculator /> </Sample>
-						
 					</Content>
 				</Row>
 			</ContentArea>
