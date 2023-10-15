@@ -11,7 +11,7 @@ function Main() {
 				<Row>
 					{/*<Sidebar />*/}
 					<Content title="About me">
-						<Card>
+						<Card style={{padding: '1rem'}}>
 							My name is Enrique Mendez. I have a PhD in Physics from MIT where I studied Quantum Physics in Ultracold Atom Systems as well as independently formulated a classical formulation of Quantum Mechanics. When my thesis is live, I'll post it here. This website is for following and documenting my more programming interests.
 							Here are my other interests in no particular order:
 							<div class='m-3'>
