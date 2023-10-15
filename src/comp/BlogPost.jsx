@@ -3,19 +3,18 @@
 import styled from 'styled-components';
 
 const Article = styled.article.attrs({
-  className: "card",
 })`
+  border: 1px solid ${props => props.theme.color};
+  border-radius: 5px;
+  background: ${props => props.theme.background};
+  color: ${props => props.theme.color};
   margin: 1rem;
   padding: 1rem;
 `;
 
-const Title = styled.h2`
-  // Add any styles specific to the title here
-`;
+const Title = styled.h2``;
 
-const DateText = styled.h6`
-  // Add any styles specific to the date here
-`;
+const DateText = styled.h6``;
 
 const Image = styled.img`
   padding: 1rem;
@@ -32,7 +31,6 @@ export default function BlogPost({ title = "a blog post", date = "undated", chil
       <Title>{title}</Title>
       <DateText>Date: {date}</DateText>
       {children}
-      {/*{images.map(returnImageComponent)}*/}
     </Article>
   );
 }
