@@ -9,7 +9,7 @@ import { blog }   	from '../assets/blogs'
 import { links }  	from '../assets/links'
 
 function returnPostComponent(post, index) {
-	return <BlogPost title={post.title} date={post.date} images={post.images}>{post.content}</BlogPost>
+	return <BlogPost {...post}>{post.content}</BlogPost>
 }
 
 function Blog() {

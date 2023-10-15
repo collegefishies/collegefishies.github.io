@@ -4,6 +4,7 @@ import linter    	from './imgs/linter.png'
 import luckyShrub	from './imgs/lucky-shrub.png'
 import sudoku    	from './imgs/sudoku.png'
 import firstUnity	from './imgs/first-vr-deployment.jpg'
+import advancedReact from './imgs/adv-react.png'
 //import components
 import styled	from 'styled-components'
 import {Link}	from 'react-router-dom'
@@ -25,6 +26,7 @@ const ImageLink = styled.img`
 export const blog = {
 	"posts": [
 		{
+			"title_image": advancedReact,
 			"title": "Finished the 'Advanced React' Course from Meta!",
 			"date": "10/14/23",
 			"content": "I just completed the course on Advanced React Components! We reviewed components. Programmatic usage of data with mapping lists to components, as well as keys and their importance in informing react of node updates in lists. We also covered forms and react: controlled vs. uncontrolled components, as well as how to make controlled components. We learned about context via React's Context API to prevent prop drilling. We covered the hooks useState, useRef, useEffect for side-effects. Also, building custom hooks was covered as well as the rules of hooks. Furthermore, we learned about useReducer hooks when more complicated state changes needed to be taken into account rather than the simpler functionality afforded by useState. Higher-Order Components (HOCs) to extend functionality and help deal with cross-cutting concerns as well as the concept of currying. As well as the render props technique for implementing the same behaviour as HOCs. We also practiced testing of react components using jest and the React testing library for testing components for continuous integration.",

@@ -1,4 +1,5 @@
 import ContentArea	from '../comp/ContentArea'
+import { Card }	from '../comp/BlogPost'
 import Sidebar    	from '../comp/Sidebar'
 import UsefulLinks	from '../comp/UsefulLinks'
 import Content    	from '../comp/Content'
@@ -10,8 +11,8 @@ function Main() {
 				<Row>
 					{/*<Sidebar />*/}
 					<Content title="About me">
-						<div class="card m-3 p-3">
-							My name is Enrique Mendez.I have a PhD in Physics from MIT where I studied Quantum Physics in Ultracold Atom Systems as well as independently formulated a classical formulation of Quantum Mechanics. When my thesis is live, I'll post it here. This website is for following and documenting my more programming interests.
+						<Card>
+							My name is Enrique Mendez. I have a PhD in Physics from MIT where I studied Quantum Physics in Ultracold Atom Systems as well as independently formulated a classical formulation of Quantum Mechanics. When my thesis is live, I'll post it here. This website is for following and documenting my more programming interests.
 							Here are my other interests in no particular order:
 							<div class='m-3'>
 								<ul>
@@ -26,7 +27,7 @@ function Main() {
 									<li>App Development</li>
 								</ul>
 							</div>	
-						</div>	
+						</Card>	
 					</Content>
 				</Row>
 			</ContentArea>
