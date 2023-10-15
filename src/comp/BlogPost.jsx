@@ -1,5 +1,5 @@
 //BlogPost.jsx
-
+import { useState } from 'react'
 import styled from 'styled-components';
 
 const Card = styled.article.attrs({
@@ -16,7 +16,6 @@ const Title = styled.h2`
 `;
 
 const DateText = styled.h6`
-  margin: 1rem;
 `;
 
 const Image = styled.img`
@@ -25,30 +24,54 @@ const Image = styled.img`
 
 const TitleImage = styled.img`
   border-radius: 10px 10px 0 0;
-  margin: -1rem;
-
   width: 100%;
   margin: 0;
 `
 
 const Content = styled.div`
-  margin: 1rem;
-  `;
+  max-height: ${props => props.isExpanded ? '100vh' : '0'};
+  overflow: hidden;
+  transition: max-height 0.3s ease, margin-bottom 0.25s linear;
+  margin: 0 1rem 1rem 1rem;
+  margin-bottom: ${props => props.isExpanded ? '1rem' : '0'};
+`;
 
+const Text = styled.p`
+  color: ${props => props.theme.gray};
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+`
+const Symbol = styled.span`
+  transform: ${ props => props.isExpanded? 'rotate(630deg)' : 'rotate(90deg)'};
+  transition: transform 0.3s ease;
+  font-weight: 800;
+`
+function SeeMore (props) {
+  return (
+    <Text>
+      See More &nbsp;
+      <Symbol {...props}>→</Symbol>
+    </Text>
+  );
+}
 function returnImageComponent(image) {
   return (
     <Image src={image} />
   );
 }
 export default function BlogPost({ title = "a blog post", date = "undated", children, ...rest}) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const toggleContent = (e) => {e.preventDefault(); setIsExpanded(!isExpanded)};
   return (
-    <Card>
+    <Card onClick={toggleContent}>
       {rest.title_image? <TitleImage src={rest.title_image}/> : null}
       <Title>{title}</Title>
-      {rest.title_image ? null : <>
+      <SeeMore isExpanded={isExpanded}/>
+      <Content isExpanded={isExpanded}>
         <DateText>Date: {date}</DateText>
-        <Content>{children}</Content>
-      </>}
+        {children}
+      </Content>
     </Card>
   );
 }
