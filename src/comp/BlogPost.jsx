@@ -65,7 +65,7 @@ export default function BlogPost({ title = "a blog post", date = "undated", chil
   const toggleContent = (e) => { setIsExpanded(!isExpanded)};
   return (
     <Card onClick={toggleContent}>
-      {rest.title_image? <TitleImage src={rest.title_image}/> : null}
+      {rest.title_image? <TitleImage src={rest.title_image} loading="lazy"/> : null}
       <Title>{title}</Title>
       <SeeMore isExpanded={isExpanded}/>
       <Content isExpanded={isExpanded}>

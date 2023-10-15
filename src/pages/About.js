@@ -4,7 +4,7 @@ import { Card }	from '../comp/BlogPost'
 import Sidebar    	from '../comp/Sidebar'
 import UsefulLinks	from '../comp/UsefulLinks'
 import Content    	from '../comp/Content'
-import Row from 'react-bootstrap/Row'
+import Row	from 'react-bootstrap/Row'
 import profile 	from '../assets/imgs/profile.jpeg'
 
 const Profile = styled.div`
