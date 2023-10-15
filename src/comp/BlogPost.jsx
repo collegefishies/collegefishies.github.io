@@ -62,7 +62,7 @@ function returnImageComponent(image) {
 }
 export default function BlogPost({ title = "a blog post", date = "undated", children, ...rest}) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const toggleContent = (e) => {e.preventDefault(); setIsExpanded(!isExpanded)};
+  const toggleContent = (e) => { setIsExpanded(!isExpanded)};
   return (
     <Card onClick={toggleContent}>
       {rest.title_image? <TitleImage src={rest.title_image}/> : null}
