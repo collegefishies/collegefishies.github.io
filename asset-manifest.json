@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.14c430d0.css",
-    "main.js": "/static/js/main.a29b66f7.js",
+    "main.js": "/static/js/main.de016353.js",
     "static/js/787.3e59ecbc.chunk.js": "/static/js/787.3e59ecbc.chunk.js",
+    "static/media/uxDesignNotes.png": "/static/media/uxDesignNotes.21c0c02f53c4755b75b9.png",
     "static/media/profile.jpeg": "/static/media/profile.51d7b5332c127a74bd0a.jpeg",
     "static/media/lucky-shrub.png": "/static/media/lucky-shrub.d9b5f9264ebfd4757911.png",
     "static/media/sudoku.png": "/static/media/sudoku.106040b17e94fba0d2ac.png",
@@ -11,11 +12,11 @@
     "index.html": "/index.html",
     "static/media/icon-arrow.svg": "/static/media/icon-arrow.76e952b1b427b84b83bd01f2f4822499.svg",
     "main.14c430d0.css.map": "/static/css/main.14c430d0.css.map",
-    "main.a29b66f7.js.map": "/static/js/main.a29b66f7.js.map",
+    "main.de016353.js.map": "/static/js/main.de016353.js.map",
     "787.3e59ecbc.chunk.js.map": "/static/js/787.3e59ecbc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14c430d0.css",
-    "static/js/main.a29b66f7.js"
+    "static/js/main.de016353.js"
   ]
 }
