@@ -37,6 +37,12 @@ const LazyLoadImage = (path) => {
 export const blog = {
 	"posts": [
 		{
+			"title_image": "/imgs/soMuchToDo.png",
+			"title": "So much to do, so much to do!",
+			"date": "10/15/23",
+			"content": "So much to do! I just finished the advanced react course which is a nice resting point. There's actually too much so I want to write down the options. One, I have a coding interview at a very interesting company lined up so that means possibly studying Algorithms and Data Structures. That means LeetCode and possibly the Coursera course on that topic. Another thing is I have another interview with another company that is on SQL and RESTful APIs so that would mean studying those two components. Which I could definitely do in two weeks. SQL itself is interesting because thats database management. Managing massive amounts of data. While this blog isn't there yet, it's easy to imagine how it could get quite large and unmanageable. I also have this business idea, which involves building an iOS app. So that would mean continuing learning about UX/UI in both the Meta Front End and Meta iOS Developer coures. (They overlap so its only one course!) It doesn't seem the most interesting thing to me right now, but I do want to build the app. I guess I did a lot of work today on the blog, so I'll just take a break and come back to it later :)"
+		},
+		{
 			"title_image": "/imgs/adv-react.png",
 			"title": "Finished the 'Advanced React' Course from Meta!",
 			"date": "10/14/23",
