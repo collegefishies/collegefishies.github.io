@@ -1,21 +1,11 @@
 //blogs.js
+//import react
+import React, {useState, useEffect} from 'react'
 //import images
 import linter    	from './imgs/linter.png'
 import luckyShrub	from './imgs/lucky-shrub.png'
 import sudoku    	from './imgs/sudoku.png'
-import sudoku_title 	from './imgs/sudoku-title.png'
-import frontEndChallenge 	from './imgs/completeFrontEndChalleng.png'
-import migrateSite 	from './imgs/migrateSite.png'
-import gitCertification 	from './imgs/gitCertification.png'
 import firstUnity	from './imgs/first-vr-deployment.jpg'
-import unity     	from './imgs/unity.png'
-import fetch    	from './imgs/fetch.png'
-import advancedReact 	from './imgs/adv-react.png'
-import hardLinks 	from './imgs/hardLinks.png'
-import linterTitle 	from './imgs/linterTitle.png'
-import htmlCourse 	from './imgs/htmlCourse.png'
-import luckyShrubTitle 	from './imgs/luckyShrubTitle.png'
-import htmlPractice 	from './imgs/htmlPractice.png'
 //import components
 import styled	from 'styled-components'
 import {Link}	from 'react-router-dom'
@@ -34,16 +24,26 @@ const ImageLink = styled.img`
 	}
 `
 
+const LazyLoadImage = (path) => {
+	const [imageSource, setImageSource] = useState(null)
+
+	useEffect(() => {
+		setImageSource(path)
+	}, [])
+
+	return imageSource? <img src={imageSource} />: <div></div>
+}
+
 export const blog = {
 	"posts": [
 		{
-			"title_image": advancedReact,
+			"title_image": "/imgs/adv-react.png",
 			"title": "Finished the 'Advanced React' Course from Meta!",
 			"date": "10/14/23",
 			"content": "I just completed the course on Advanced React Components! We reviewed components. Programmatic usage of data with mapping lists to components, as well as keys and their importance in informing react of node updates in lists. We also covered forms and react: controlled vs. uncontrolled components, as well as how to make controlled components. We learned about context via React's Context API to prevent prop drilling. We covered the hooks useState, useRef, useEffect for side-effects. Also, building custom hooks was covered as well as the rules of hooks. Furthermore, we learned about useReducer hooks when more complicated state changes needed to be taken into account rather than the simpler functionality afforded by useState. Higher-Order Components (HOCs) to extend functionality and help deal with cross-cutting concerns as well as the concept of currying. As well as the render props technique for implementing the same behaviour as HOCs. We also practiced testing of react components using jest and the React testing library for testing components for continuous integration.",
 		},
 		{
-			"title_image": unity,
+			"title_image": "/imgs/unity.png",
 			"title": "Just ran my first App in VR!",
 			"date": "10/10/23",
 			"content": <>
@@ -52,13 +52,13 @@ export const blog = {
 				</>
 		},
 		{
-			"title_image": fetch,
+			"title_image": "/imgs/fetch.png",
 			"title": "Just learned how to fetch data!",
 			"date": "10/04/23",
 			"content": "One of the hallmarks of programming is asynchronous programming, which is really useful only for slow events, inputs, data fetching. I just implemented my first real data fetching in the 'Fetch Random Person' sample I just uploaded!"
 		},
 		{
-			"title_image": sudoku_title,
+			"title_image": "/imgs/sudoku-title.png",
 			"title": "Trying my hand at Sudoku.",
 			"date": "09/25/23",
 			"content": <>
@@ -67,7 +67,7 @@ export const blog = {
 			</>
 		},
 		{
-			"title_image": frontEndChallenge,
+			"title_image": "/imgs/completeFrontEndChalleng.png",
 			"title": "Added my First Front-End Challenge!",
 			"date": "09/23/23",
 			"content": <>
@@ -76,27 +76,27 @@ export const blog = {
 		},
 
 		{
-			"title_image": migrateSite,
+			"title_image": "/imgs/migrateSite.png",
 			"title": "Learned React and Migrated Site!",
 			"date": "09/21/23",
 			"content": "I learned React basics and started porting over my website. As I mentioned earlier, blog posts are very programmatic. You can just loop over a list of objects, and make new posts accordingly, and this post is created with that very technique! Unfortunately its very simplified right now, hosting only text content. Perhaps, I can handle images by just adding an image attribute, and just posting that? Edit: Added images! I realized instead of storing blog posts as strings I could also store them as react components and do all my styling that way.",
 		},
 		{
-			"title_image": gitCertification,
+			"title_image": "/imgs/gitCertification.png",
 			"title": "Finished Git Certification",
 			"date": "09/18/23",
 			"content": "That was surprisingly easy, which makes sense since I've been using Git for years. I did it as I'm self taught, and I was curious what I was missing. The answer is not much. But, the section on terminal commands was useful. I didn't know redirects as well as I do now, and I finally know what grep stands for (global regular expressions and print).",
 
 		},
 		{
-			"title_image": hardLinks,
+			"title_image": "/imgs/hardLinks.png",
 			"title": "A post about hardlinks!",
 			"date": "09/18/23",
 			"content": <p>I was stoked when I first discovered hardlinks. This was because I had made my first useful library. It was a vector calculus library that made simulation of N 3D particles simple, so I needed to use it a lot. But also, I would discover add functionality I could add later. So I needed some way to be able to use the most up to date function and also a way to update all copies simultaneously.  I don't remember how I found out about it, but that's exactly what hard links are. They are pointers to the same file in storage. So opening and editing it is editing the same file. It gives non-local access in a way that looks local to anyone using the hard link.</p>,
 
 		},
 		{
-			"title_image": linterTitle,
+			"title_image": "/imgs/linterTitle.png",
 			"title": "Installed my first linter",
 			"date": "09/17/23",
 			"content": <>
@@ -105,13 +105,13 @@ export const blog = {
 			</>,
 		},
 		{
-			"title_image": htmlCourse,
+			"title_image": "/imgs/htmlCourse.png",
 			"title": "Finished the HTML/CSS Coursera Course!",
 			"date": "09/16/23",
 			"content": "So I finally finished the course, and I feel like I've learned a lot. Especially after applying the techniques in practice. However, what I've realized in both building this website, is I can see how pure HTML can lead to a very long file that will become harder to manage over time. So I'm interested in learning React to handle retaining components and managing the layout programmatically. This especially makes sense for blog posts, as they'll all have the same format and simply grow in number, so a database is a better place to store them rather than in the HTML.",
 		},
 		{
-			"title_image": luckyShrubTitle,
+			"title_image": "/imgs/luckyShrubTitle.png",
 			"title": "My first dummy website",
 			"date": "09/16/23",
 			"content": <>
@@ -126,7 +126,7 @@ export const blog = {
 			"content": "I was checking the consoles for bugs on my site and found this: Not allowed to load local resource: file:///favicon.ico. Luckily, ChatGPT knows all. Just use <link rel='icon' href='favicon.ico' type='image/x-icon'>",
 		},
 		{
-			"title_image": htmlPractice,
+			"title_image": "/imgs/htmlPractice.png",
 			"title": "HTML Practice",
 			"date": "09/15/23",
 			"content": (
