@@ -12,6 +12,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 const lightTheme = {
 	background: 'white',
+	darkGray: '#617798',
 	gray: '#D0D0D0',
 	color: 'black',
 }

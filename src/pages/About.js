@@ -13,6 +13,8 @@ const Profile = styled.div`
 	align-items: center;
 `
 const ProfilePicture = styled.img`
+	margin-top: 1rem;
+	margin-bottom: 2rem;
 	width: 300px;
 	border-radius: 50%;
 `

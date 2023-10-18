@@ -14,6 +14,8 @@ const NavLink = styled(Link)`
   }
 `
 
+const UL = styled.ul`
+`
 const LI = styled.li`
   margin: 1rem;
 `
@@ -28,7 +30,7 @@ export default function NavToBurger(props) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <UL className="navbar-nav me-auto mb-2 mb-lg-0">
             <LI className="nav-item">
               <NavLink to="/">Home</NavLink>
             </LI>
@@ -41,7 +43,7 @@ export default function NavToBurger(props) {
             <LI className="nav-item">
               <NavLink to="/about">About</NavLink>
             </LI>
-          </ul>
+          </UL>
         </div>
       </div>
     </nav>

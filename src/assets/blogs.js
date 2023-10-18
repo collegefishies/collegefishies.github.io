@@ -54,7 +54,7 @@ export const blog = {
 			"date": "10/10/23",
 			"content": <>
 				<p>Today I received my Quest 3, and ran a simple 3D Scene with physics on the quest headset! For the past few days, I've been studying Unity. (I tried Unreal Engine but unfortunately the Oculus + Unreal fork does not have Mac support). I've had a lot of ideas in the Software, and AR/VR space, but no skills to make them real. Today I've taking a real demonstrable step towards changing that. I ran my own app in the Quest 3! Not only that Unity had an error with finding the Android NDK, and I fixed that bug. Of course, ChatGPT made it painless by giving me things to check step by step. Luckily the first thing was the solution. Man, I wish ChatGPT existed at the start of my PhD instead of the end.</p>	
-				<Image src={require('./imgs/first-vr-deployment.png')}/>
+				<Image src={require('./imgs/first-vr-deployment.jpg')}/>
 				</>
 		},
 		{

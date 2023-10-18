@@ -29,7 +29,7 @@ const TitleImage = styled.img`
 `
 
 const Content = styled.div`
-  max-height: ${props => props.isExpanded ? '200vh' : '0'};
+  max-height: ${props => props.isExpanded ? '300vh' : '0'};
   overflow: hidden;
   transition: max-height 0.3s ease, margin-bottom 0.25s linear;
   margin: 0 1rem 1rem 1rem;
@@ -37,7 +37,7 @@ const Content = styled.div`
 `;
 
 const Text = styled.p`
-  color: ${props => props.theme.gray};
+  color: ${props => props.theme.darkGray};
   display: flex;
   align-items: center;
   margin-left: 1rem;
