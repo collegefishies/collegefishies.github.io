@@ -1,11 +1,6 @@
 //blogs.js
 //import react
 import React, {useState, useEffect} from 'react'
-//import images
-import linter    	from './imgs/linter.png'
-import luckyShrub	from './imgs/lucky-shrub.png'
-import sudoku    	from './imgs/sudoku.png'
-import firstUnity	from './imgs/first-vr-deployment.jpg'
 //import components
 import styled	from 'styled-components'
 import {Link}	from 'react-router-dom'
@@ -59,7 +54,7 @@ export const blog = {
 			"date": "10/10/23",
 			"content": <>
 				<p>Today I received my Quest 3, and ran a simple 3D Scene with physics on the quest headset! For the past few days, I've been studying Unity. (I tried Unreal Engine but unfortunately the Oculus + Unreal fork does not have Mac support). I've had a lot of ideas in the Software, and AR/VR space, but no skills to make them real. Today I've taking a real demonstrable step towards changing that. I ran my own app in the Quest 3! Not only that Unity had an error with finding the Android NDK, and I fixed that bug. Of course, ChatGPT made it painless by giving me things to check step by step. Luckily the first thing was the solution. Man, I wish ChatGPT existed at the start of my PhD instead of the end.</p>	
-				<Image src={firstUnity}/>
+				<Image src={require('./imgs/first-vr-deployment.png')}/>
 				</>
 		},
 		{
@@ -76,7 +71,7 @@ export const blog = {
 			"date": "09/25/23",
 			"content": <>
 			<p> Mostly recovered. Trying to make a Sudoku Component. I want it to be fully responsive. So I'm trying to force the text to resize according to the number cells, and it's incredibly annoying. I'll get there though. <b>Edit:</b> Completed! Check the design samples section!</p>
-			<Image src={sudoku} />
+			<Image src={require('./imgs/sudoku.png')} />
 			</>
 		},
 		{
@@ -119,7 +114,7 @@ export const blog = {
 			"date": "09/17/23",
 			"content": <>
 				<p>I learned about linters in the context of HTML/CSS. The essentially just check for syntax errors. Since CSS provides absolutely no runtime halts when running code this makes them necessary for CSS debugging. I just added an HTML one because I was curious how good my source was. So I installed SublimeLinter. It was surprisingly annoying. For future use, the steps are: 1. Install SublimeLinter 2. Install SublimeLinter extensions for each linter, e.g., stylelint and html tidy 3. Configure the package settings for Sublime Linter to notify it of your new linters. Without this step, they will not function.</p>
-				<Image src={linter} />
+				<Image src={require('./imgs/linter.png')} />
 			</>,
 		},
 		{
@@ -136,7 +131,7 @@ export const blog = {
 			"date": "09/16/23",
 			"content": <>
 				<p>I just made my first website for a portfolio! It's for a fictional garden company as part of my course on 'HTML and CSS in Depth' from Meta. See my portfolio on the left. I made it entirely in HTML/CSS.</p>
-				<a href="web-portfolio/lucky-shrub/index.html"><ImageLink src={luckyShrub} /></a>
+				<a href="web-portfolio/lucky-shrub/index.html"><ImageLink src={require('./imgs/lucky-shrub.png')} /></a>
 			</>
 		},
 		{
