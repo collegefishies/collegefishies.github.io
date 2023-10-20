@@ -22,6 +22,18 @@ const ImageLink = styled.img`
 export const blog = {
 	"posts": [
 		{
+			"title_image": require("./imgs/title/immersiveUI.png"),
+			"title": "Immersive UI",
+			"date": "10/20/23",
+			"content": <>I was watching a video game, where this guy had this term "Immersive UI" where the UI would only appear when you needed it. When you moused over near the item. It allowed for an immersive view of the content that really allowed one to focus and enjoy the scene. <br/><br/>I was really excited to see that, as it seems almost all UI's avoid that principle. There's this design principle that it breaks which is Nielsen's "Visibility of System Status. The problem with this design principle, is inevitably the user will become accustomed to a user interface, if the app is meant to be used in the long term for a long time. Think Coursera, Netflix or a Goodnotes. However, only one of these embraces this "Immersive UI" by allowing the UI to disappear, and that's Netflix when the movie is playing. Coursera, and Goodnotes, and Safari all waste a massive amount of screen real estate on elements that do not need to be there most of the time. <br/><br/> I think we need to embrace more immersive UI's that make it easier to study, relax, and take notes, and otherwise do work. I'm glad I'm learning Front End Development. It allows me to make apps to actively engage in making such decisions reality. </>
+		},
+		{
+			"title_image": require("./imgs/title/firstWireframe.png"),
+			"title": "First Wireframe!",
+			"date": "10/20/23",
+			"content": <div>I made my first wireframe! It's a design tool for rapid prototyping of interfaces. Such wireframes focus only on the structure of the content, not the aesthetics and finer details. Hence, the lack of images. <br/><br/> First step was to note the requirements for the page. Those are on the left. Then on the frame the sizing for each of the blocks is laid out, and represented with colored blocks and labeled. Afterwards, they are shrunk in width and moved to the side as a reference. This marks the completion of the rough design. <br/> <br/> The design is refined by adding the components that then populate the required blocks with placeholder images and icon, and some sample text.</div>
+		},
+		{
 			"title_image": require("./imgs/title/designFundamentals.png"),
 			"title": "Finally! Applied Design Fundamentals!",
 			"date": "10/18/23",
