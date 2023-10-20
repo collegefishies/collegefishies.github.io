@@ -1,12 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.14c430d0.css",
-    "main.js": "/static/js/main.ddde84e9.js",
+    "main.js": "/static/js/main.5121587b.js",
     "static/js/787.3e59ecbc.chunk.js": "/static/js/787.3e59ecbc.chunk.js",
+    "static/media/immersiveUI.png": "/static/media/immersiveUI.812f351fa58b9a5b5b92.png",
     "static/media/soMuchToDo.png": "/static/media/soMuchToDo.57700823cf901f271be5.png",
     "static/media/unity.png": "/static/media/unity.23abf23183074a70479a.png",
     "static/media/htmlCourse.png": "/static/media/htmlCourse.40b6ea3cfd70ab93652a.png",
     "static/media/sudoku-title.png": "/static/media/sudoku-title.faf672a14c1e43f8c4bb.png",
+    "static/media/designFundamentals.png": "/static/media/designFundamentals.9e9c5431054d5b875414.png",
     "static/media/completeFrontEndChalleng.png": "/static/media/completeFrontEndChalleng.7435cf53f2c3c08768a7.png",
     "static/media/hardLinks.png": "/static/media/hardLinks.b279dc2ffa20721959bb.png",
     "static/media/htmlPractice.png": "/static/media/htmlPractice.d4b5a71fa675914f2e75.png",
@@ -23,14 +25,15 @@
     "static/media/sudoku.png": "/static/media/sudoku.106040b17e94fba0d2ac.png",
     "static/media/linter.png": "/static/media/linter.a0550fb15666c200c7a8.png",
     "static/media/first-vr-deployment.jpg": "/static/media/first-vr-deployment.629e13be5e42255c2ce2.jpg",
+    "static/media/firstWireframe.png": "/static/media/firstWireframe.0c31b67f9d21ebb8442f.png",
     "index.html": "/index.html",
     "static/media/icon-arrow.svg": "/static/media/icon-arrow.76e952b1b427b84b83bd01f2f4822499.svg",
     "main.14c430d0.css.map": "/static/css/main.14c430d0.css.map",
-    "main.ddde84e9.js.map": "/static/js/main.ddde84e9.js.map",
+    "main.5121587b.js.map": "/static/js/main.5121587b.js.map",
     "787.3e59ecbc.chunk.js.map": "/static/js/787.3e59ecbc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14c430d0.css",
-    "static/js/main.ddde84e9.js"
+    "static/js/main.5121587b.js"
   ]
 }
